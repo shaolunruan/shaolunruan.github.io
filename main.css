@@ -62,9 +62,10 @@ section{
 
 .about>img{
   position: absolute;
-  right: -253px;
+  right: -250px;
   top: 0;
-  width: 28%;
+  width: 25%;
+  box-shadow: 10px 10px 0 0 #707070;
 }
 
 .about{
