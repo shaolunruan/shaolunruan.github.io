@@ -1,7 +1,8 @@
 body {
   font-family: 'Times New Roman', sans-serif;
   background-color: #716f6f;
-  font-size: 15px; }
+  font-size: 15px;
+}
 
 h1,
 h2,
@@ -10,21 +11,22 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  margin: 0 0 5px; }
+  margin: 0 0 5px;
+}
 
-main{
+main {
   font-size: 1.3em;
 }
 
 
-#footer_container{
+#footer_container {
   background-color: #000;
   height: 30px;
   border-radius: 0 0 15px 15px;
   padding: 10px 0 0 0;
 }
 
-#footer_container #modified_time{
+#footer_container #modified_time {
   color: #fff;
   position: absolute;
   right: 20px;
@@ -32,7 +34,7 @@ main{
   font-style: italic;
 }
 
-#footer_container #right_reserved{
+#footer_container #right_reserved {
   color: #fff;
   position: absolute;
   left: 20px;
@@ -40,27 +42,27 @@ main{
   font-style: italic;
 }
 
-#footer_container #counter{
+#footer_container #counter {
   position: absolute;
   right: 400px;
 }
 
-.blue-link{
-  color:steelblue;
+.blue-link {
+  color: steelblue;
   font-size: 1em;
 }
 
-.blue-link:hover{
-  color:rgb(107, 175, 231);
+.blue-link:hover {
+  color: rgb(107, 175, 231);
 }
 
 
 
-section{
+section {
   margin-bottom: 15px;
 }
 
-.about>img{
+.about>img {
   position: absolute;
   right: -250px;
   top: 0;
@@ -68,42 +70,53 @@ section{
   box-shadow: 10px 10px 0 0 #7070709c;
 }
 
-.about{
-  width:640px;
-  position:relative;
+.about {
+  width: 640px;
+  position: relative;
 }
 
 h1 {
-  font-size: 50px; }
+  font-size: 50px;
+}
 
 h2 {
-  font-size: 18px; }
+  font-size: 18px;
+}
 
 h3 {
   font-size: 13px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
-p, h3 {
+p,
+h3 {
   margin-top: 0;
-  margin-bottom: 0.25rem; }
+  margin-bottom: 0.25rem;
+}
 
 ul {
   margin: 0;
   padding-bottom: 0.5rem;
   padding-left: 0.75rem;
-  list-style-type: none; }
-  ul li {
-    text-indent: -9px; }
-    ul li::before {
-      content: '-  ';
-      font-size: 16px;
-      display: inline; }
+  list-style-type: none;
+}
+
+ul li {
+  text-indent: -9px;
+}
+
+ul li::before {
+  content: '-  ';
+  font-size: 16px;
+  display: inline;
+}
 
 .wrap {
   background-color: #fff;
   margin: 0 auto;
   max-width: 900px;
-  padding: 0.3in 0.5in; }
+  padding: 0.3in 0.5in;
+}
 
 .heading-line {
   display: -webkit-box;
@@ -111,50 +124,92 @@ ul {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+}
 
 a {
   color: #000;
   display: inline-block;
   font-size: 17px;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 header {
   border-bottom: 3px solid #000;
   margin-bottom: 5px;
-  padding-bottom: 15px; }
-  header .page-title {
-    display: flex;
-    justify-content: space-between; }
-  header a + a {
-    border-left: 2px solid #000;
-    margin-left: 1rem;
-    padding-left: 1rem; }
+  padding-bottom: 15px;
+}
+
+header .page-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+header a+a {
+  border-left: 2px solid #000;
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+tr.one_paper td {
+  padding-top: 5px;
+  padding-bottom: 10px
+}
+
+.pub_image {
+  float: left;
+  width: 180px;
+  min-height: 100px;
+  max-height: 170px;
+  margin-right: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px
+}
+
+.myself{
+  text-decoration: underline;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1em;
+}
+
+.tables{
+  margin-bottom:25px;
+}
 
 @media (min-width: 769px) {
   .box {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
     margin: auto;
     position: relative;
-    width: 1000px; }
-    .box::before, .box::after {
-      background: transparent;
-      bottom: 12px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-      content: ' ';
-      height: 10px;
-      left: 12px;
-      position: absolute;
-      width: 40%;
-      z-index: -1; }
-    .box::after {
-      left: auto;
-      right: 12px;
-      transform: skew(5deg) rotate(5deg); }
+    width: 1000px;
+  }
+
+  .box::before,
+  .box::after {
+    background: transparent;
+    bottom: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    content: ' ';
+    height: 10px;
+    left: 12px;
+    position: absolute;
+    width: 40%;
+    z-index: -1;
+  }
+
+  .box::after {
+    left: auto;
+    right: 12px;
+    transform: skew(5deg) rotate(5deg);
+  }
+
   body {
-    padding: 3rem; } }
+    padding: 3rem;
+  }
+}
 
 @media print {
   html {
-    zoom: 1.05; } }
-
+    zoom: 1.05;
+  }
+}
