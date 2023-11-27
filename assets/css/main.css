@@ -7587,7 +7587,9 @@ img.mfp-img {
   order: 2;
 }
 
-
+.all-publication li{
+  font-size: 1.2em;
+}
 
 
 .paper-box .paper-box-image img {
