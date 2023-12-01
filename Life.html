@@ -178,7 +178,7 @@
             <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="index.html" target="_self">Homepage</a></li>
           
             <li class="masthead__menu-item"><a href="Publications.html" target="_self">Publications</a></li>
-            <!-- <li class="masthead__menu-item"><a href="CV.html" target="_self">CV</a></li> -->
+            <li class="masthead__menu-item"><a href="CV.html" target="_self">CV</a></li>
 
             <li class="masthead__menu-item"><a href="Life.html" target="_self">Life</a></li>
 
@@ -198,7 +198,7 @@
 
 
         <div id="gallery-title">
-            <p style="font-size: 1.6em"><em>"Never regret anything that made you smile." – Mark Twain</em></p>
+            <p style="font-size: 1.6em"><em>"Be Simple, Be Inspired, Be Original, and Enjoy"</em></p>
             
         </div>
 
@@ -277,8 +277,8 @@
 
 
             <div class="item" data-caption="Caption for Image 1">
-                <a href="assets/photo-gallery/IMG_4729.PNG">
-                    <img src="assets/photo-gallery/IMG_4729.PNG" alt="">
+                <a href="assets/photo-gallery/IMG_4764.PNG">
+                    <img src="assets/photo-gallery/IMG_4764.PNG" alt="">
                 <div class="overlay">
                     <p>Graduated from UESTC, China, 2019</p>
                 </div>
@@ -353,38 +353,6 @@
       </footer>
     </div>
 
-    <script src="assets/js/main.min.js"></script>
-
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWFCX99KQZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', "G-SWFCX99KQZ");
-</script>
-
-
-<script>
-    $(document).ready(function () {
-        
-        var gsDataBaseUrl = 'https://cdn.jsdelivr.net/gh/rayeren/rayeren.github.io@'
-        
-        $.getJSON(gsDataBaseUrl + "google-scholar-stats/gs_data.json", function (data) {
-            // var totalCitation = data['citedby']
-            // document.getElementById('total_cit').innerHTML = totalCitation;
-            var citationEles = document.getElementsByClassName('show_paper_citations')
-            Array.prototype.forEach.call(citationEles, element => {
-                var paperId = element.getAttribute('data')
-                var numCitations = data['publications'][paperId]['num_citations']
-                element.innerHTML = '| Citations: ' + numCitations;
-            });
-        });
-    })
-</script>
 
 
   </body>
