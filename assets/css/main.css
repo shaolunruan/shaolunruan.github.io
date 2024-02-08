@@ -7637,3 +7637,84 @@ h1:before,
   background-color: #00369f;
   font-size: 0.9em;
 }
+
+
+
+
+
+
+
+
+.clients { margin-bottom: 15px; }
+
+.clients-list {
+  max-width: 900px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  /* margin: 0 -15px; */
+  padding-top: 25px;
+  padding-bottom: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 25px;
+}
+
+.clients-item {
+  min-width: 200px;
+  scroll-snap-align: start;
+  list-style-type: none;
+}
+
+.clients-item {
+  position: relative; /* Add position relative */
+}
+
+.clients-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 170px;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed */
+  transition: height 0.3s ease; /* Add transition effect */
+  overflow: hidden;
+}
+
+.clients-item:hover::after {
+  height: 40px; /* Adjust the height of the mask */
+}
+
+.clients-item:hover p {
+  display: block; /* Show the text on hover */
+  z-index: 999;
+}
+
+.clients-item p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  font-size: 14px;
+  color: #fff; /* Text color */
+  display: none; /* Initially hide the text */
+}
+
+
+
+
+.clients-item img {
+  width: 170px;
+  filter: grayscale(1);
+  transition: var(--transition-1);
+  border-radius: 10px;
+}
+
+.clients-item img:hover { filter: grayscale(0); }
+
