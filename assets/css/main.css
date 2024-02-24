@@ -1677,6 +1677,13 @@ figure.highlight .highlight {
   border: 0px solid #f2f3f3;
   border-radius: 0;
 }
+
+.a-style{
+color: rgb(32, 72, 159);
+text-decoration: underline;  
+}
+
+
 .highlight table td {
   padding: 5px;
 }
