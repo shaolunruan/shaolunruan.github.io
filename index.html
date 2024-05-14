@@ -253,6 +253,9 @@
               leveraging the methods from <b>Data Visualization</b> and <b>Human-computer Interaction</b>.
             </p>
 
+            <br>
+            <h1 class="typing-words">I like <span class="typing-words-span"></span></h1>
+
 <br/>
 
 <h1 id="-news" style="margin-top: 30px;">🔥 News</h1>
@@ -439,12 +442,12 @@
 
 <h1 id="-invited-talks" style="margin-top: 30px;">💬 Invited Talks</h1>
 <ul>
-  <li style="font-size: 1.15em;"><em>2024.04</em>, Invited talk - "Visualization to Support the Application of Quantum Computing", Central South University </li>
+  <li style="font-size: 1.15em;"><em>2024.04</em>, Invited talk - "Visualization towards Supporting the Application of Quantum Computing", Central South University </li>
   <li style="font-size: 1.15em;"><em>2024.02</em>, Invited lecture - "Stepping Into the Era of Interpretable Quantum Computing", QuCS Lecture Series, University of Notre Dame | <a href="https://sites.nd.edu/quantum/quantum-computer-systems-qucs-lecture-series/">[Link]</a></li>
-  <li style="font-size: 1.15em;"><em>2024.01</em>, Invited talk - "Visualization to Support the Application of Quantum Computing", Sichuan University | <a href="assets/slides/HKUST presentation.pdf"><img  src="https://www.gstatic.com/images/branding/product/1x/slides_2020q4_48dp.png" alt="" aria-hidden="true" role="presentation" style="width:25px"></a></li>
+  <li style="font-size: 1.15em;"><em>2024.01</em>, Invited talk - "Visualization towards Supporting the Application of Quantum Computing", Sichuan University | <a href="assets/slides/HKUST presentation.pdf"><img  src="https://www.gstatic.com/images/branding/product/1x/slides_2020q4_48dp.png" alt="" aria-hidden="true" role="presentation" style="width:25px"></a></li>
   <li style="font-size: 1.15em;"><em>2024.01</em>, Invited talk - "Towards Making Your VIS Paper Writing Better", University of Electronic Science and Technology of China (UESTC) | <a href="assets/slides/UESTC talk.pdf"><img  src="https://www.gstatic.com/images/branding/product/1x/slides_2020q4_48dp.png" alt="" aria-hidden="true" role="presentation" style="width:25px"></a></li>
   <li style="font-size: 1.15em;"><em>2023.12</em>, Invited speaker, VAST Panel in VisLab HAI Seminar, The Hong Kong University of Science and Technology (HKUST)</li>
-  <li style="font-size: 1.15em;"><em>2023.11</em>, Invited talk - "Visualization to Support the Application of Quantum Computing", The Hong Kong University of Science and Technology (HKUST) | <a href="assets/slides/HKUST presentation.pdf"><img  src="https://www.gstatic.com/images/branding/product/1x/slides_2020q4_48dp.png" alt="" aria-hidden="true" role="presentation" style="width:25px"></a></li>
+  <li style="font-size: 1.15em;"><em>2023.11</em>, Invited talk - "Visualization towards Supporting the Application of Quantum Computing", The Hong Kong University of Science and Technology (HKUST) | <a href="assets/slides/HKUST presentation.pdf"><img  src="https://www.gstatic.com/images/branding/product/1x/slides_2020q4_48dp.png" alt="" aria-hidden="true" role="presentation" style="width:25px"></a></li>
 
 
 </ul>
@@ -543,4 +546,39 @@
 
 
   </body>
+
+
+
+  <script>
+
+    // for the effect of "typing words"
+    const dynamicText = document.querySelector(".typing-words-span");
+const words = ["playing basketball", "music", "action manga", "travelling", "appealing design", "vitamin sea", "coding", "ragdolls", "salad", "chill drink", "meditation", "fashion and styling"];
+// Variables to track the position and deletion status of the word
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typeEffect = () => {
+    const currentWord = words[wordIndex];
+    const currentChar = currentWord.substring(0, charIndex);
+    dynamicText.textContent = currentChar;
+    dynamicText.classList.add("stop-blinking");
+    if (!isDeleting && charIndex < currentWord.length) {
+        // If condition is true, type the next character
+        charIndex++;
+        setTimeout(typeEffect, 100);
+    } else if (isDeleting && charIndex > 0) {
+        // If condition is true, remove the previous character
+        charIndex--;
+        setTimeout(typeEffect, 30);
+    } else {
+        // If word is deleted then switch to the next word
+        isDeleting = !isDeleting;
+        dynamicText.classList.remove("stop-blinking");
+        wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+        setTimeout(typeEffect, 1400);
+    }
+}
+typeEffect();
+  </script>
 </html>
