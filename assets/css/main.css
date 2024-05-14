@@ -7735,3 +7735,31 @@ h1:before,
 
 .clients-item img:hover { filter: grayscale(0); }
 
+
+
+.typing-words {
+  color: #565b60;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+.typing-words span {
+  color: #2b59b6;
+  position: relative;
+}
+.typing-words span::before {
+  content: "";
+  height: 30px;
+  width: 2px;
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  background: #2b59b6;
+  transform: translateY(-45%);
+  animation: blink 0.7s infinite;
+}
+.typing-words span.stop-blinking::before {
+  animation: none;
+}
+@keyframes blink {
+  50% { opacity: 0 }
+}
