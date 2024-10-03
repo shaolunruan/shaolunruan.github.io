@@ -2284,6 +2284,14 @@ select:focus {
 .blue-link {
     color: steelblue;
     /* font-size: 1em; */
+    text-decoration: none;
+
+  }
+
+  .black-link {
+    color: #4A4E52;
+    font-style: italic;
+    text-decoration: none;
   }
 
 
@@ -2292,7 +2300,7 @@ select:focus {
   margin: 0 0 0.5em;
 }
 .page__content a {
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 .page__content a:hover {
   text-decoration: underline;
@@ -2936,7 +2944,7 @@ select:focus {
   }
 }
 .author__avatar {
-  display: table-cell;
+  /* display: table-cell; */
   vertical-align: top;
   width: 75px;
 }
