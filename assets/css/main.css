@@ -1668,6 +1668,16 @@ figure.highlight .highlight {
   border-radius: 0;
 }
 
+.highlighter-preprint {
+  background-color: #7f1938;
+  color: white;
+  margin-bottom: 0em;
+  padding: 0em;
+  font-size: 0.6875em;
+  border: 0px solid #f2f3f3;
+  border-radius: 0;
+}
+
 .highlighter-rouge-conf {
   background-color: #777001;
   color: white;
