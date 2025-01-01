@@ -2979,7 +2979,7 @@ select:focus {
   #footer_container #modified_time {
     color: #4a4a4a;
     position: absolute;
-    right: 20px;
+    right: 10em;
     /* bottom: 0px; */
     font-style: italic;
     font-size: 0.9em;
@@ -2989,7 +2989,7 @@ select:focus {
     color: #4a4a4a;
     position: absolute;
     /* bottom: 0px; */
-    left: 20px;
+    left: 2em;
     font-size: 0.9em;
     font-style: italic;
   }
