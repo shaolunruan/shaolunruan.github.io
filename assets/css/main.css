@@ -3908,3 +3908,13 @@ h1:before,
   font-family: Arial, sans-serif;
 
 }
+
+
+.all-publication li {
+  line-height: 1.2em;
+  margin-bottom: 0.8em;
+
+}
+
+.all-publication {
+}
