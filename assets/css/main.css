@@ -1688,10 +1688,7 @@ figure.highlight .highlight {
   border-radius: 0;
 }
 
-.a-style{
-color: rgb(32, 72, 159);
-text-decoration: underline;  
-}
+
 
 
 .highlight table td {
@@ -3986,6 +3983,7 @@ h1:before,
   background-color: #ffffff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease, transform 0.2s ease;
+  min-height: 200px;
 }
 
 .paper-box:hover {
@@ -4014,3 +4012,13 @@ h1:before,
     transform: translateY(0);
   }
 }
+
+
+
+.a-style{
+color: rgb(32, 72, 159);
+text-decoration: underline;  
+font-size: 1.05em;
+}
+
+
