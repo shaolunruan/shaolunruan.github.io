@@ -49,13 +49,19 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>   
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="assets/css/main.css">
+
+<style>
+.hidden-news {
+  display: none;
+}
+</style>
 
 <meta http-equiv="cleartype" content="on">
 <head>
@@ -194,8 +200,11 @@
 
 <h1 id="-news" style="margin-top: 30px;">🔥 News</h1>
 
+<ul id="newsList">
+
+  <li><em>2025.07</em>: 🏅 Our paper won the IEEE VIS'25 Best Paper Honorable Mention Award. Congrats team!</li>
   <li><em>2025.07</em>: 🎉 Our two papers are accepted by IEEE VIS'25! See you in Vienna 🇦🇹.</li>
-  <li><em>2025.03</em>: 🎉 Our paper SynthLens was accepted by IEEE TVCG. Congrats team!</li>
+  <li><em>2025.03</em>: Our paper SynthLens was accepted by IEEE TVCG. </li>
   <li><em>2025.01</em>: I became a research scholar at Monash University in Melbourne 🌊🌊🌊 !</li>
   <li><em>2024.12</em>: 🎄🎅🏻🎄<span style="color:rgb(15, 150, 15);">Wishing you and your family a joyous Christmas filled with peace, love, and happiness!!</span>🎄🎅🏻🎄</li>
   <li><em>2024.07</em>: 🔥 Awarded the SMU SCIS Dean's List Award.</li>
@@ -203,18 +212,20 @@
   <li><em>2024.05</em>: Passed the Ph.D. Thesis Proposal.</li>
   <li><em>2023.12</em>: Our paper was accepted by IEEE PacificVis TVCG track with 11.5% acceptance rate. See you in Tokyo!</li>
   <li><em>2023.11</em>: Our paper was accepted by IEEE TVCG. See you in Florida!</li>
-  <li><em>2023.07</em>: Awarded the SMU Presidential Doctoral Fellowship (2023).</li>
-  <li><em>2023.03</em>: Our paper was accepted by EuroVIS'23. See you in Leipzig, Germany!</li>
-  <li><em>2022.11</em>: Passed the Ph.D. Qualifying Exam and became a Ph.D. candidate.</li>
-  <li><em>2022.07</em>: Our paper VACSEN was accepted by IEEE VIS'22! See you in Oklahoma City.</li>
-  <li><em>2022.05</em>: Our tutorial was accepted by IEEE QCE'22! See you in Broomfield, Colorado.</li>
-  <li><em>2022.02</em>: Became a Ph.D. student under the supervision of Yong WANG.</li>
-  <li><em>2021.11</em>: Our paper BatchLens was accepted by IEEE DATE'22 as the 1st author.</li>
-  <li><em>2021.07</em>: My paper Intercept Graph was accepted by IEEE VIS'21.</li>
+  <li class="hidden-news"><em>2023.07</em>: Awarded the SMU Presidential Doctoral Fellowship (2023).</li>
+  <li class="hidden-news"><em>2023.03</em>: Our paper was accepted by EuroVIS'23. See you in Leipzig, Germany!</li>
+  <li class="hidden-news"><em>2022.11</em>: Passed the Ph.D. Qualifying Exam and became a Ph.D. candidate.</li>
+  <li class="hidden-news"><em>2022.07</em>: Our paper VACSEN was accepted by IEEE VIS'22! See you in Oklahoma City.</li>
+  <li class="hidden-news"><em>2022.05</em>: Our tutorial was accepted by IEEE QCE'22! See you in Broomfield, Colorado.</li>
+  <li class="hidden-news"><em>2022.02</em>: Became a Ph.D. student under the supervision of Yong WANG.</li>
+  <li class="hidden-news"><em>2021.11</em>: Our paper BatchLens was accepted by IEEE DATE'22 as the 1st author.</li>
+  <li class="hidden-news"><em>2021.07</em>: My paper Intercept Graph was accepted by IEEE VIS'21.</li>
   <!-- <li><em>2019.07</em>: Graduated from University of Science and Tech. of China and get a Bachelor's degree.</li> -->
-  <li><em>2017.08</em>: Completed Engligh Language Academy at the University of Auckland, New Zealand.  </li>
-  <li><em>2017.06</em>: Became a Visiting Student at the Univeristy of Melbourne, Australia.</li>
+  <li class="hidden-news"><em>2017.08</em>: Completed Engligh Language Academy at the University of Auckland, New Zealand.  </li>
+  <li class="hidden-news"><em>2017.06</em>: Became a Visiting Student at the Univeristy of Melbourne, Australia.</li>
 </ul>
+
+<p  id="expandNewsLink" style="cursor: pointer; color: #214B8C;"  onclick="toggleNews()">Show more...</p>
 
 
 
@@ -234,6 +245,8 @@
   <!-- Tab Content -->
   <div id="designstudy" class="tab-content active">
 
+
+    
   <div class="paper-box">
     <div class="paper-box-image"><div>
       <div class="badge">IEEE TVCG</div>
@@ -242,13 +255,14 @@
 </div>
   <div class="paper-box-text">
   
-      <span class="a-style">Qualitative Study for LLM-assisted Design Study Process: Strategies, Challenges, and Roles</span> 
+      <i class='fas fa-award' style='font-size:1.35em;  color:#B22222; margin-right: 0.4em;'></i><span class="a-style">Qualitative Study for LLM-assisted Design Study Process: Strategies, Challenges, and Roles</span> 
         </br>
   <p style="font-size: 0.90em;"><b>Shaolun Ruan</b>, Rui Sheng, Xiaolin Wen, Jiachen Wang, Tianyi Zhang, Yong Wang, Tim Dwyer, and Jiannan Li<br />
     </p>
   <p style="font-style: italic; font-size: 0.9em;">IEEE Transactions on Visualization and Computer Graphics (TVCG 2025).
-
   <!-- To be released. -->
+   </br>
+  <font style="color: rgb(193, 19, 19);"> IEEE VIS'25 Best Paper Honorable Mention</font>
    </p>
 
       <p><a target="_blank" href="https://arxiv.org/abs/2507.10024"><strong>[pdf]</strong></a> 
@@ -260,7 +274,8 @@
     </div>
   </div>
 
-
+    
+  
 
   
 
@@ -630,6 +645,12 @@
 
 
   </div>
+
+
+
+  <div>
+    <p><a style="text-decoration: none;" href="Publications.html" target="_self">Access all publications...</a> </p>
+</div>
   
 
 
@@ -640,9 +661,6 @@
 
 
 
-  <div>
-    <p><a style="text-decoration: none;" href="Publications.html" target="_self">Access all publications ➡️</a> </p>
-</div>
 
   
 
@@ -654,8 +672,8 @@
 
 <h1 id="-honors-and-awards" style="margin-top: 30px;">🎖 Honors and Awards</h1>
 <ul>
+  <li style="font-size: 1.2em;"><em>2025 - </em> IEEE VIS Best Paper Honorable Mention</li>
   <li style="font-size: 1.2em;"><em>2024 - </em> SMU Presidential Doctoral Fellowship</li>
-
   <li style="font-size: 1.2em;"><em>2024 - </em>Dean's List Award</li>
   <li style="font-size: 1.2em;"><em>2023 - </em> SMU Presidential Doctoral Fellowship</li>
   <li style="font-size: 1.2em;"><em>2019 - </em> UESTC SCSE Outstanding Student Award </li>
@@ -668,7 +686,7 @@
 
 <h1 id="-educations" style="margin-top: 30px;">📖 Educations</h1>
 <ul>
-  <li style="font-size: 1.2em;"><em>From 2024.12</em>, Research Scholar, Monash University, Australia.</li>
+  <li style="font-size: 1.2em;"><em>From 2024.12</em>, Visiting Research Scholar, Monash University, Australia.</li>
   <li style="font-size: 1.2em;"><em>From 2022.01</em>, Ph.D. Candidate, Singapore Management Univeristy, Singapore.</li>
   <li style="font-size: 1.2em;"><em>2019.07 - 2021.09</em>, Research Assistant, Kent State University, U.S.</li>
   <li style="font-size: 1.2em;"><em>2015.09 - 2019.07</em>, Bachelar's Degree, University of Electronic Science and Technology of China, China.</li>
@@ -702,7 +720,8 @@
 
 <h1 id="-invited-talks" style="margin-top: 30px;"> 🧑🏻‍🏫 Teaching</h1>
 <ul>
-  <li style="font-size: 1.15em;"><em>2025 Semester 2</em>, Teaching Assistant, FIT3179 - Data Visualisation, Monash University</li>
+  <li style="font-size: 1.15em;"><em>2025 Semester 2</em>, Tutor, Studio 6, FIT3179 - Data Visualisation, Monash University</li>
+  <li style="font-size: 1.15em;"><em>2025 Semester 2</em>, Tutor, Studio 12, FIT3179 - Data Visualisation, Monash University</li>
   <li style="font-size: 1.15em;"><em>2023-24 Spring</em>, Teaching Assistant, IS428 - Visual Analytics for Business Intelligence, SMU</li>
   <li style="font-size: 1.15em;"><em>2024-25 Fall</em>, Teaching Assistant, CS711 - Learning and Planning in Intelligent Systems, SMU</li>
 </ul>
@@ -842,6 +861,25 @@ function showTab(tabName) {
   
   // Add active class to clicked button
   event.target.classList.add('active');
+}
+
+function toggleNews() {
+  const hiddenNews = document.querySelectorAll('.hidden-news');
+  const expandLink = document.getElementById('expandNewsLink');
+  
+  if (hiddenNews[0].style.display === 'list-item') {
+    // Hide the news items
+    hiddenNews.forEach(item => {
+      item.style.display = 'none';
+    });
+    expandLink.textContent = 'Show more...';
+  } else {
+    // Show the news items
+    hiddenNews.forEach(item => {
+      item.style.display = 'list-item';
+    });
+    expandLink.textContent = 'Show less...';
+  }
 }
 
 
