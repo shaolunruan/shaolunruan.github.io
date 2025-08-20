@@ -1,0 +1,357 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+    <style>
+    
+    .grid {
+        display: grid;
+        grid-template-rows: 
+          repeat(4, 180px);
+        grid-template-columns: 
+          repeat(3, 1fr);
+        grid-gap: 5px;
+      }
+
+      .grid .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This property ensures the image covers the entire div */
+}
+
+      
+      .item:nth-child(1) {
+        grid-row: 1 / 4;
+      }
+      
+      .item:nth-child(2) {
+        grid-column: 2 / 4;
+        grid-row: 1 / 3;
+      }
+      
+      .item:nth-child(3) {
+        grid-column: 3 / 4;
+        grid-row: 3 / 5;
+      }
+      
+      .item:nth-child(4) {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+      }
+      
+      .item:nth-child(5) {
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+      }
+      
+      /* styling code */
+      
+      .grid {
+        margin:20px auto;
+        max-width:1000px;
+      }
+      
+      .grid > .item {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+
+      .grid .item {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid .item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Adjust the height as needed */
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.grid .item:hover .overlay {
+    opacity: 1;
+}
+
+.grid .item .overlay p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* Add this style to your existing CSS */
+
+#gallery-title {
+    text-align:center;
+    /* margin-left: 100px; */
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+#gallery-title h1 {
+    font-size: 3em;
+    font-weight:lighter;
+    color: #333; /* Adjust the color as needed */
+}
+
+    </style>
+
+
+
+
+<title>Shaolun RUAN (阮劭伦) - Homepage</title>
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="K3pCHK6p1ze31BTrFjPJN7nM4NF3St6xnOoggmyb4m0" />
+
+  <meta name="baidu-site-verification" content="code-3qUFycruVb" />
+  <!-- https://shaolunruan.github.io -->
+  <meta name="baidu-site-verification" content="code-nJWfLF15hZ" />
+
+<!-- end SEO -->
+
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>   
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="../assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+<head>
+  <base target="_blank">
+</head>
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/cherry.png">
+<link rel="manifest" href="images/site.webmanifest">
+
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="images/mstile-144x144.png?v=M44lzPylqQ">
+<meta name="msapplication-config" content="images/browserconfig.xml?v=M44lzPylqQ">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="../assets/css/academicons.css"/>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <ul class="visible-links">
+            <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="index.html" target="_self">Homepage</a></li>
+          
+            <li class="masthead__menu-item"><a href="Publications.html" target="_self">Publications</a></li>
+            <li class="masthead__menu-item"><a href="CV.html" target="_self">CV</a></li>
+            <li class="masthead__menu-item"><a href="Student.html" target="_self">Students</a></li>
+            <li class="masthead__menu-item"><a href="Life.html" target="_self">Life</a></li>
+
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <div id="main">
+
+
+        <div id="gallery-title">
+            <p style="font-size: 1.6em"><em>"No great future is worth missing the beauty of all four seasons."</em></p>
+            
+        </div>
+
+
+
+        <div class="grid">
+
+            <div class="item" data-caption="Caption for Image 1">
+                <a href="../assets/photo-gallery/IMG_0327.png">
+                    <img src="../assets/photo-gallery/IMG_0327.png" alt="">
+                <div class="overlay">
+                    <p>Eiffel Tower, Paris, 2023</p>
+                </div>
+                </a>
+            </div>
+
+
+            <div class="item" data-caption="Caption for Image 1">
+                <a href="../assets/photo-gallery/9914deddb05966aac620d15b4a7d89b6.JPG">
+                    <img src="../assets/photo-gallery/9914deddb05966aac620d15b4a7d89b6.JPG" alt="">
+                <div class="overlay">
+                    <p>Brighton Beach, Melbourne, 2017</p>
+                </div>
+                </a>
+            </div>      
+
+            
+            <div class="item" data-caption="Caption for Image 1">
+                <a href="../assets/photo-gallery/IMG_0108.JPG">
+                    <img src="../assets/photo-gallery/IMG_0108.JPG" alt="">
+                <div class="overlay">
+                    <p>Leipzig Square, 2023</p>
+                </div>
+                </a>
+            </div>
+
+            <div class="item" data-caption="Caption for Image 1">
+                <a href="../assets/photo-gallery/1235.png">
+                    <img src="../assets/photo-gallery/1235.png" alt="">
+                <div class="overlay">
+                    <p>First Day of PhD, 2022</p>
+                </div>
+                </a>
+            </div>
+
+        
+
+            <div class="item" data-caption="Caption for Image 1">
+                <a href="../assets/photo-gallery/431.png">
+                    <img src="../assets/photo-gallery/431.png" alt="">
+                <div class="overlay">
+                    <p>Edinburgh Winter, 2022</p>
+                </div>
+                </a>
+            </div>
+        
+        </div>    
+
+        <br/>
+        <br/>
+        <br/>
+
+
+
+        <div class="grid">
+            
+            <div class="item" data-caption="Caption for Image 1">
+                <a href="../assets/photo-gallery/IMG_3948.JPG">
+                    <img src="../assets/photo-gallery/IMG_3948.JPG" alt="">
+                <div class="overlay">
+                    <p>HKUST Reunion, Melbourne, 2023</p>
+                </div>
+                </a>
+            </div>
+
+
+
+            <div class="item" data-caption="Caption for Image 1">
+                <a href="../assets/photo-gallery/IMG_4764.PNG">
+                    <img src="../assets/photo-gallery/IMG_4764.PNG" alt="">
+                <div class="overlay">
+                    <p>Graduated from UESTC, China, 2019</p>
+                </div>
+                </a>
+            </div>      
+
+
+
+
+            <div class="item" data-caption="Caption for Image 1">
+                <a href="../assets/photo-gallery/62401be900d87dfbd3b84ff6976d4c89.JPG">
+                    <img src="../assets/photo-gallery/62401be900d87dfbd3b84ff6976d4c89.JPG" alt="">
+                <div class="overlay">
+                    <p>Dawn in Auckland, 2017</p>
+                </div>
+                </a>
+            </div>   
+
+
+           
+            <!-- <div class="item" data-caption="Caption for Image 1">
+                <a href="../assets/photo-gallery/30758dbe22250a6d534d73686582473d.JPG">
+                    <img src="../assets/photo-gallery/30758dbe22250a6d534d73686582473d.JPG" alt="">
+                <div class="overlay">
+                    <p>Dawn in Auckland, 2017</p>
+                </div>
+                </a>
+            </div> -->
+
+            <div class="item" data-caption="Caption for Image 1">
+                <a href="../assets/photo-gallery/IMG_4425.png">
+                    <img src="../assets/photo-gallery/IMG_4425.png" alt="">
+                <div class="overlay">
+                    <p>Christmas Eve in London, 2022</p>
+                </div>
+                </a>
+            </div>
+
+        
+
+
+            <div class="item" data-caption="Caption for Image 1">
+                <a href="../assets/photo-gallery/IMG_4722.PNG">
+                    <img src="../assets/photo-gallery/IMG_4722.PNG" alt="">
+                <div class="overlay">
+                    <p>Bintan, Indonesia, 2022</p>
+                </div>
+                </a>
+            </div>
+
+            <!-- <div class="item" data-caption="Caption for Image 1">
+                <a href="../assets/photo-gallery/30758dbe22250a6d534d73686582473d.JPG">
+                    <img src="../assets/photo-gallery/30758dbe22250a6d534d73686582473d.JPG" alt="">
+                <div class="overlay">
+                    <p>Bintan, Indonesia, 2022</p>
+                </div>
+                </a>
+            </div> -->
+        
+        </div>  
+        
+    </div>
+
+
+
+
+    <div id="footer_container">
+      <footer>
+        <a id="right_reserved">Shaolun Ruan's Personal Website @All Rights Reserved.</a>
+<div style="float: right; right: 1em;" id="sfcwnll7l6jujfdrx9cdjftjy4buqjlmbf3"></div><script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=wnll7l6jujfdrx9cdjftjy4buqjlmbf3&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="website counters"><img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=wnll7l6jujfdrx9cdjftjy4buqjlmbf3"  title="website counters" alt="website counters"></a></noscript>
+
+      </footer>
+    </div>
+
+
+
+  </body>
+</html>
