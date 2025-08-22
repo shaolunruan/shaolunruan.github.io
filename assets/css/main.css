@@ -2994,14 +2994,16 @@ select:focus {
 
 
 .author__avatar img {
-  max-width: 160px;
+  max-width: 180px;
   min-width: 75px;
-  border-radius: 50%;
+  min-height: 200px;
+  border-radius:7%;
+  margin-bottom: 25px;
 }
 @media (min-width: 57.8125em) {
   .author__avatar img {
-    padding: 5px;
-    border: 1px solid #f2f3f3;
+    padding: 6px;
+    border: 1px solid rgb(229, 229, 229);
   }
 }
 .author__content {
