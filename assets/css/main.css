@@ -2994,8 +2994,8 @@ select:focus {
 
 
 .author__avatar img {
-  max-width: 180px;
-  min-width: 75px;
+  /* max-width: 180px; */
+  min-width: 145px;
   min-height: 200px;
   border-radius:7%;
   margin-bottom: 25px;
