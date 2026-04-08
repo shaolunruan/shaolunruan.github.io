@@ -31,7 +31,6 @@ const content = renderArticle(`
   ${renderListSection("📖 Educations", educations, "1.2em")}
   ${renderListSection("💬 Invited Talks", invitedTalks, "1.15em")}
   ${renderListSection("🧑🏻‍🏫 Teaching", teaching, "1.15em")}
-  ${renderUpcomingWork(upcomingWork)}
 `);
 
 mountPage({
