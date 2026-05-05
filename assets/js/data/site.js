@@ -8,18 +8,18 @@ export const navItems = [
 
 export const profile = {
   name: "Shaolun RUAN (阮劭伦)",
-  bio: "SMU HAI Lab",
-  description: "Ph.D. candidate in Data Visualization and Human-Computer Interaction.",
+  bio: "Data Analysis and Visualization Lab",
+  description: "Postdoc in Data Visualization and Human-Computer Interaction.",
   avatar: "/assets/images/IMG_8212.JPG",
   email: "shaolun.ruan@monash.edu",
   location: "Australia",
   links: [
     {
-      href: "mailto:shaolun.ruan@monash.edu",
-      html: '<i class="fas fa-fw fa-envelope" aria-hidden="true"></i> shaolun.ruan@monash.edu',
+      href: "mailto:shaolun.ruan@uni-konstanz.de",
+      html: '<i class="fas fa-fw fa-envelope" aria-hidden="true"></i> shaolun.ruan@uni-konstanz.de',
     },
     {
-      html: '<i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Australia',
+      html: '<i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Germany',
     },
     {
       href: "https://github.com/shaolunruan",

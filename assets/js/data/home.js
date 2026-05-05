@@ -2,15 +2,17 @@ export const introHtml = `
   <h1 style="font-size: 1.7em;">Hi, I'm Shaolun Ruan</h1>
   <p style="font-size: 1.2em;">
     I am currently a Ph.D. candidate of Computer Science at
-    <a class="blue-link">Singapore Management University</a>, under the supervision of Professor
-    <a href="http://yong-wang.org/" class="black-link">Yong WANG</a> and Professor
-    <a href="https://faculty.smu.edu.sg/profile/li-jiannan-7441" class="black-link">Jiannan LI</a>.
+    Singapore Management University, under the supervision of Professor
+    <a  class="blue-link" style="font-style: italic;" href="http://yong-wang.org/" class="black-link">Yong WANG</a> and Professor
+    <a  class="blue-link"  style="font-style: italic;" href="https://faculty.smu.edu.sg/profile/li-jiannan-7441" class="black-link">Jiannan LI</a>.
     Before that, I received my bachelor degree from
-    <a href="https://www.uestc.edu.cn/" class="blue-link">University of Electronic Science and Technology of China</a>
+    University of Electronic Science and Technology of China
     at School of Computer Science and Engineering in 2019.
     I became a research scholar at
-    <a href="https://www.monash.edu/" class="blue-link">Monash University</a> under the supervision of
-    <a href="https://marvl.infotech.monash.edu/~dwyer/" class="black-link">Tim Dwyer</a> in 2025.
+    Monash University under the supervision of Professor
+    <a  class="blue-link"  style="font-style: italic;" href="https://marvl.infotech.monash.edu/~dwyer/" class="black-link">Tim Dwyer</a> in 2025.
+    I joined the research team at University of Konstanz and become a postdoctoral researcher under the supervision of Professor
+    <a  class="blue-link"  style="font-style: italic;" href="https://www.uni-konstanz.de/centre-for-human-data-society/people/prof-dr-daniel-keim/" class="black-link">Daniel A. Keim</a> in 2026. 
     <br><br>
     My research interests include <b>Data Visualization</b> and <b>Human-Computer Interaction</b>.
     My work focuses on developing human-centered computing tools to address complex scientific problems,
@@ -34,7 +36,7 @@ export const typingWords = [
 ];
 
 export const newsItems = [
-  { date: "2026.05", text: "I will join the research team at University of Konstanz and become a postdoctoral researcher." },
+  { date: "2026.05", text: "I join the research team at University of Konstanz and become a postdoctoral researcher." },
   { date: "2026.01", text: "I have passed the Ph.D. thesis defense." },
   {
     date: "2025.12",
@@ -91,8 +93,9 @@ export const honors = [
 ];
 
 export const educations = [
-  "<em>From 2024.12</em>, Visiting Research Scholar, Monash University, Australia.",
-  "<em>From 2022.01</em>, Ph.D. Candidate, Singapore Management Univeristy, Singapore.",
+  "<em>From 2026.05</em>, Postdoctoral Researcher, Univeristy of Konstanz, Germany.",
+  "<em>2024.12 - 2026.01</em>, Visiting Research Scholar, Monash University, Australia.",
+  "<em>2022.01 - 2026.01</em>, Ph.D. Candidate, Singapore Management Univeristy, Singapore.",
   "<em>2019.07 - 2021.09</em>, Research Assistant, Kent State University, U.S.",
   "<em>2015.09 - 2019.07</em>, Bachelar's Degree, University of Electronic Science and Technology of China, China.",
 ];
