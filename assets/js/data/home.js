@@ -1,24 +1,24 @@
 export const introHtml = `
   <h1 style="font-size: 1.7em;">Hi, I'm Shaolun Ruan</h1>
   <p style="font-size: 1.2em;">
-    I am currently a Ph.D. candidate of Computer Science at
+  I am currently a postdoctoral researcher at University of Konstanz, under the supervision of Professor
+    <a  class="blue-link"  style="font-style: italic;" href="https://www.uni-konstanz.de/centre-for-human-data-society/people/prof-dr-daniel-keim/" class="black-link">Daniel A. Keim</a>. 
+    Before that, 
+    I finished my Ph.D. in Computer Science at
     Singapore Management University, under the supervision of Professor
     <a  class="blue-link" style="font-style: italic;" href="http://yong-wang.org/" class="black-link">Yong WANG</a> and Professor
     <a  class="blue-link"  style="font-style: italic;" href="https://faculty.smu.edu.sg/profile/li-jiannan-7441" class="black-link">Jiannan LI</a>.
-    Before that, I received my bachelor degree from
+    I received my bachelor degree from
     University of Electronic Science and Technology of China
     at School of Computer Science and Engineering in 2019.
     I became a research scholar at
     Monash University under the supervision of Professor
     <a  class="blue-link"  style="font-style: italic;" href="https://marvl.infotech.monash.edu/~dwyer/" class="black-link">Tim Dwyer</a> in 2025.
-    I joined the research team at University of Konstanz and become a postdoctoral researcher under the supervision of Professor
-    <a  class="blue-link"  style="font-style: italic;" href="https://www.uni-konstanz.de/centre-for-human-data-society/people/prof-dr-daniel-keim/" class="black-link">Daniel A. Keim</a> in 2026. 
     <br><br>
     My research interests include <b>Data Visualization</b> and <b>Human-Computer Interaction</b>.
     My work focuses on developing human-centered computing tools to address complex scientific problems,
     facilitating the process of explainability and data-driven decision-making.
     <br>
-    <font color="#ed5858">I am currently looking for jobs in academia. Feel free to contact me if you have any openings!</font>
   </p>
 `;
 
@@ -28,9 +28,9 @@ export const typingWords = [
   "action manga",
   "crisp air",
   "Japanese sad songs",
-  "coding",
+  "hitting the gym",
   "vitamin sea",
-  "ragdolls",
+  "golden British shorthair",
   "eating subway",
   "chill drinking",
 ];
