@@ -36,7 +36,7 @@ export const typingWords = [
 ];
 
 export const newsItems = [
-  { date: "2026.05", text: "I join the research team at University of Konstanz and become a postdoctoral researcher." },
+  { date: "2026.05", text: "I join the research team at University of Konstanz and become a postdoctoral researcher 🇩🇪." },
   { date: "2026.01", text: "I have passed the Ph.D. thesis defense." },
   {
     date: "2025.12",
@@ -73,10 +73,10 @@ export const newsItems = [
   { date: "2023.11", text: "Our paper was accepted by IEEE TVCG. See you in Florida!" },
   { date: "2023.07", text: "Awarded the SMU Presidential Doctoral Fellowship (2023).", hidden: true },
   { date: "2023.03", text: "Our paper was accepted by EuroVIS'23. See you in Leipzig, Germany!", hidden: true },
-  { date: "2022.11", text: "Passed the Ph.D. Qualifying Exam and became a Ph.D. candidate.", hidden: true },
+  { date: "2022.11", text: "Passed the Ph.D. Qualifying Exam and became a Ph.D. candidate 🇸🇬.", hidden: true },
   { date: "2022.07", text: "Our paper VACSEN was accepted by IEEE VIS'22! See you in Oklahoma City.", hidden: true },
   { date: "2022.05", text: "Our tutorial was accepted by IEEE QCE'22! See you in Broomfield, Colorado.", hidden: true },
-  { date: "2022.02", text: "Became a Ph.D. student under the supervision of Yong WANG.", hidden: true },
+  { date: "2022.02", text: "Became a Ph.D. student under the supervision of Yong WANG 🇸🇬.", hidden: true },
   { date: "2021.11", text: "Our paper BatchLens was accepted by IEEE DATE'22 as the 1st author.", hidden: true },
   { date: "2021.07", text: "My paper Intercept Graph was accepted by IEEE VIS'21.", hidden: true },
   { date: "2017.08", text: "Completed Engligh Language Academy at the University of Auckland, New Zealand.", hidden: true },
