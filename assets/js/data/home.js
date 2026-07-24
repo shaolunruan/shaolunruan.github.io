@@ -84,12 +84,12 @@ export const newsItems = [
 ];
 
 export const honors = [
-  "<em>2025 - </em> Google PhD Fellowship",
-  "<em>2025 - </em> IEEE VIS 2025 Best Paper Honorable Mention",
-  "<em>2024 - </em> SMU Presidential Doctoral Fellowship",
-  "<em>2024 - </em> Dean's List Award",
-  "<em>2023 - </em> SMU Presidential Doctoral Fellowship",
-  "<em>2019 - </em> UESTC SCSE Outstanding Student Award",
+  "<em>2025 - </em> <a href='https://research.google/programs-and-events/phd-fellowship/recipients/' style='color: inherit; text-decoration: none;'>Google PhD Fellowship</a>",
+  "<em>2025 - </em> <a href='https://ieeevis.org/year/2025/info/awards/best-paper-awards' style='color: inherit; text-decoration: none;'>IEEE VIS 2025 Best Paper Honorable Mention</a>",
+  "<em>2024 - </em> <a href='https://graduatestudies.smu.edu.sg/phd/research-achievements/presidential-doctoral-fellowship' style='color: inherit; text-decoration: none;'>SMU Presidential Doctoral Fellowship</a>",
+  "<em>2024 - </em> <a href='https://computing.smu.edu.sg/newsletter/scis-phd-deans-list-award-2024' style='color: inherit; text-decoration: none;'>Dean's List Award</a>",
+  "<em>2023 - </em> <a href='https://graduatestudies.smu.edu.sg/phd/research-achievements/presidential-doctoral-fellowship' style='color: inherit; text-decoration: none;'>SMU Presidential Doctoral Fellowship</a>",
+  "<em>2019 - </em> <a href='' style='color: inherit; text-decoration: none;'>UESTC SCSE Outstanding Student Award</a>",
 ];
 
 export const educations = [
