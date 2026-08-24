@@ -23,3 +23,18 @@ export const galleryGroups = [
     { image: "/assets/photo-gallery/IMG_4722.PNG", caption: "Bintan, Indonesia, 2022" },
   ],
 ];
+
+export const galleryQuoteZh = "“再美好的未来，也不值得错过四季的风景。”";
+
+const galleryCaptionsZh = [
+  "中国兰州，2025", "意大利威尼斯，2025", "日本东京，2024", "澳大利亚墨尔本，2025", "日本富士山，2024",
+  "巴黎埃菲尔铁塔，2023", "墨尔本布莱顿海滩，2017", "德国莱比锡广场，2023", "博士生涯第一天，新加坡，2022", "爱丁堡之冬，2022",
+  "香港科技大学校友重聚，墨尔本，2023", "毕业于 UESTC，中国，2019", "奥克兰黎明，2017", "伦敦平安夜，2022", "印度尼西亚民丹岛，2022",
+];
+
+export const galleryGroupsZh = galleryGroups.map((group, groupIndex) =>
+  group.map((item, itemIndex) => ({
+    ...item,
+    caption: galleryCaptionsZh[groupIndex * 5 + itemIndex],
+  })),
+);

@@ -2,18 +2,18 @@ export const introHtml = `
   <h1 style="font-size: 1.7em;">Hi, I'm Shaolun Ruan</h1>
   <p style="font-size: 1.2em;">
   I am currently a postdoctoral researcher at University of Konstanz, under the supervision of Professor
-    <a  class="blue-link"  style="font-style: italic;" href="https://www.uni-konstanz.de/centre-for-human-data-society/people/prof-dr-daniel-keim/" class="black-link">Daniel A. Keim</a>. 
+    <a class="blue-link" href="https://www.uni-konstanz.de/centre-for-human-data-society/people/prof-dr-daniel-keim/">Daniel A. Keim</a>. 
     Before that, 
     I finished my Ph.D. in Computer Science at
     Singapore Management University, under the supervision of Professor
-    <a  class="blue-link" style="font-style: italic;" href="http://yong-wang.org/" class="black-link">Yong WANG</a> and Professor
-    <a  class="blue-link"  style="font-style: italic;" href="https://faculty.smu.edu.sg/profile/li-jiannan-7441" class="black-link">Jiannan LI</a>.
+    <a class="blue-link" href="http://yong-wang.org/">Yong WANG</a> and Professor
+    <a class="blue-link" href="https://faculty.smu.edu.sg/profile/li-jiannan-7441">Jiannan LI</a>.
     I received my bachelor degree from
     University of Electronic Science and Technology of China
     at School of Computer Science and Engineering in 2019.
     I became a research scholar at
     Monash University under the supervision of Professor
-    <a  class="blue-link"  style="font-style: italic;" href="https://marvl.infotech.monash.edu/~dwyer/" class="black-link">Tim Dwyer</a> in 2025.
+    <a class="blue-link" href="https://marvl.infotech.monash.edu/~dwyer/">Tim Dwyer</a> in 2025.
     <br><br>
     My research interests include <b>Data Visualization</b> and <b>Human-Computer Interaction</b>.
     My work focuses on developing human-centered computing tools to address complex scientific problems,
@@ -85,7 +85,7 @@ export const newsItems = [
 
 export const honors = [
   "<em>2025 - </em> <a href='https://research.google/programs-and-events/phd-fellowship/recipients/' style='color: inherit; text-decoration: none;'>Google PhD Fellowship</a>",
-  "<em>2025 - </em> <a href='https://ieeevis.org/year/2025/info/awards/best-paper-awards' style='color: inherit; text-decoration: none;'>IEEE VIS 2025 Best Paper Honorable Mention</a>",
+  "<em>2025 - </em> <a href='https://ieeevis.org/year/2025/info/awards/best-paper-awards' style='color: inherit; text-decoration: none;'>IEEE VIS 2025 Best Paper Honorable Mention Award</a>",
   "<em>2024 - </em> <a href='https://graduatestudies.smu.edu.sg/phd/research-achievements/presidential-doctoral-fellowship' style='color: inherit; text-decoration: none;'>SMU Presidential Doctoral Fellowship</a>",
   "<em>2024 - </em> <a href='https://computing.smu.edu.sg/newsletter/scis-phd-deans-list-award-2024' style='color: inherit; text-decoration: none;'>Dean's List Award</a>",
   "<em>2023 - </em> <a href='https://graduatestudies.smu.edu.sg/phd/research-achievements/presidential-doctoral-fellowship' style='color: inherit; text-decoration: none;'>SMU Presidential Doctoral Fellowship</a>",
@@ -93,11 +93,11 @@ export const honors = [
 ];
 
 export const educations = [
-  "<em>From 2026.05</em>, Postdoctoral Researcher, Univeristy of Konstanz, Germany.",
-  "<em>2024.12 - 2026.01</em>, Visiting Research Scholar, Monash University, Australia.",
-  "<em>2022.01 - 2026.01</em>, Ph.D. Candidate, Singapore Management Univeristy, Singapore.",
-  "<em>2019.07 - 2021.09</em>, Research Assistant, Kent State University, U.S.",
-  "<em>2015.09 - 2019.07</em>, Bachelar's Degree, University of Electronic Science and Technology of China, China.",
+  "<em>From 2026.05</em>, Postdoctoral Researcher, University of Konstanz, Germany 🇪🇺.",
+  "<em>2024.12 - 2026.01</em>, Visiting Research Scholar, Monash University, Australia 🇦🇺.",
+  "<em>2022.01 - 2026.01</em>, Ph.D. Candidate, Singapore Management University, Singapore 🇸🇬.",
+  "<em>2019.07 - 2021.09</em>, Research Assistant, Kent State University, U.S. 🇺🇸.",
+  "<em>2015.09 - 2019.07</em>, Bachelor's Degree, University of Electronic Science and Technology of China, China 🇨🇳.",
 ];
 
 export const invitedTalks = [

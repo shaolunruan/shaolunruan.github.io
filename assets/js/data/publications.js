@@ -11,7 +11,8 @@ export const publications = [
     authors:
       "<b>Shaolun Ruan</b>, Rui Sheng, Xiaolin Wen, Jiachen Wang, Tianyi Zhang, Yong Wang, Tim Dwyer, and Jiannan Li",
     venue: "IEEE Transactions on Visualization and Computer Graphics (TVCG 2025).",
-    venueNote: "IEEE VIS'25 Best Paper Honorable Mention",
+    venueNote: "IEEE VIS 2025 Best Paper Honorable Mention Award",
+    venueNoteZh: "IEEE VIS 2025 最佳论文荣誉提名奖",
     links: [
       { label: "[pdf]", href: "https://arxiv.org/abs/2507.10024" },
     ],

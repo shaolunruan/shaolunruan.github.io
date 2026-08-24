@@ -9,17 +9,17 @@ export const navItems = [
 export const profile = {
   name: "Shaolun RUAN (阮劭伦)",
   bio: "Data Analysis and Visualization Lab",
-  description: "Postdoc in Data Visualization and Human-Computer Interaction.",
+  description: "Postdoctoral Researcher at the University of Konstanz, working in Data Visualization and Human-Computer Interaction.",
   avatar: "/assets/images/IMG_8212.JPG",
-  email: "shaolun.ruan@monash.edu",
-  location: "Australia",
+  email: "slruan.2021@phdcs.smu.edu.sg",
+  location: "Germany 🇪🇺",
   links: [
     {
-      href: "mailto:shaolun.ruan@uni-konstanz.de",
-      html: '<i class="fas fa-fw fa-envelope" aria-hidden="true"></i> shaolun.ruan@uni-konstanz.de',
+      href: "mailto:slruan.2021@phdcs.smu.edu.sg",
+      html: '<i class="fas fa-fw fa-envelope" aria-hidden="true"></i> slruan.2021@phdcs.smu.edu.sg',
     },
     {
-      html: '<i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Germany',
+      html: '<i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Germany 🇪🇺',
     },
     {
       href: "https://github.com/shaolunruan",
@@ -42,4 +42,31 @@ export const footer = {
     "https://counter1.optistats.ovh/private/counter.js?c=wnll7l6jujfdrx9cdjftjy4buqjlmbf3&down=async",
   counterImage:
     "https://counter1.optistats.ovh/private/freecounterstat.php?c=wnll7l6jujfdrx9cdjftjy4buqjlmbf3",
+};
+
+export const siteTranslations = {
+  en: {
+    navItems,
+    profileBio: profile.bio,
+    profileDescription: profile.description,
+    locationHtml: '<i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Germany 🇪🇺',
+    footerText: footer.text,
+    languageLabel: "中文",
+    languageAriaLabel: "切换到中文",
+  },
+  zh: {
+    navItems: [
+      { href: "/", label: "首页" },
+      { href: "/publication/", label: "学术论文" },
+      { href: "/CV/", label: "简历" },
+      { href: "/student/", label: "学生" },
+      { href: "/life/", label: "生活" },
+    ],
+    profileBio: "数据分析与可视化实验室",
+    profileDescription: "德国康斯坦茨大学博士后研究员，研究方向为数据可视化与人机交互。",
+    locationHtml: '<i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> 德国 🇪🇺',
+    footerText: "阮劭伦个人网站 · 保留所有权利。",
+    languageLabel: "EN",
+    languageAriaLabel: "Switch to English",
+  },
 };

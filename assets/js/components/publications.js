@@ -1,4 +1,4 @@
-import { publications } from "../data/publications.js";
+import { publications } from "../data/publications.js?v=zh-demo-11";
 
 const publicationMap = new Map(publications.map((publication) => [publication.id, publication]));
 
@@ -13,7 +13,7 @@ function renderLinks(links = []) {
     .join(" | ");
 }
 
-export function renderPublicationCard(publication) {
+export function renderPublicationCard(publication, locale = "en") {
   const imageAttributes = [
     `src="${publication.image}"`,
     `alt="${publication.title}"`,
@@ -22,8 +22,11 @@ export function renderPublicationCard(publication) {
   if (publication.imageWidth) imageAttributes.push(`width="${publication.imageWidth}"`);
   if (publication.imageHeight) imageAttributes.push(`height="${publication.imageHeight}"`);
 
+  const venueNote = locale === "zh" && publication.venueNoteZh
+    ? publication.venueNoteZh
+    : publication.venueNote;
   const venueHtml = publication.venue
-    ? `<p style="font-style: italic; font-size: 0.9em;">${publication.venue}${publication.venueNote ? `<br><font style="color: rgb(193, 19, 19);">${publication.venueNote}</font>` : ""}</p>`
+    ? `<p style="font-style: italic; font-size: 0.9em;">${publication.venue}${venueNote ? `<br><font style="color: rgb(193, 19, 19);">${venueNote}</font>` : ""}</p>`
     : "";
 
   const statusHtml = publication.statusText ? `<p>${publication.statusText}</p>` : "";
@@ -48,15 +51,15 @@ export function renderPublicationCard(publication) {
   `;
 }
 
-export function renderPublicationCards(ids) {
+export function renderPublicationCards(ids, locale = "en") {
   return ids
     .map((id) => publicationMap.get(id))
     .filter(Boolean)
-    .map(renderPublicationCard)
+    .map((publication) => renderPublicationCard(publication, locale))
     .join("");
 }
 
-export function renderPublicationTabs(tabs) {
+export function renderPublicationTabs(tabs, labels = {}, locale = "en") {
   const buttons = tabs
     .map(
       (tab, index) =>
@@ -67,16 +70,16 @@ export function renderPublicationTabs(tabs) {
   const contents = tabs
     .map(
       (tab, index) =>
-        `<div id="${tab.id}" class="tab-content${index === 0 ? " active" : ""}">${renderPublicationCards(tab.publicationIds)}</div>`,
+        `<div id="${tab.id}" class="tab-content${index === 0 ? " active" : ""}">${renderPublicationCards(tab.publicationIds, locale)}</div>`,
     )
     .join("");
 
   return `
     <div class="publications-container">
-      <h1 id="-publications" style="margin-top: 30px;">📝 Featured Publications</h1>
+      <h1 id="-publications" style="margin-top: 30px;">📝 ${labels.title || "Featured Publications"}</h1>
       <div class="tab-navigation">${buttons}</div>
       ${contents}
-      <div><p><a style="text-decoration: none;" href="/publication/">Access all publications...</a></p></div>
+      <div><p><a style="text-decoration: none;" href="/publication/">${labels.all || "Access all publications..."}</a></p></div>
     </div>
   `;
 }

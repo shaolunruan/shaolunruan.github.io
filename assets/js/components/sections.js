@@ -1,4 +1,4 @@
-export function renderNewsSection(newsItems) {
+export function renderNewsSection(newsItems, labels = {}) {
   const items = newsItems
     .map(
       (item) =>
@@ -7,9 +7,9 @@ export function renderNewsSection(newsItems) {
     .join("");
 
   return `
-    <h1 id="-news" style="margin-top: 30px;">🔥 News</h1>
+    <h1 id="-news" style="margin-top: 30px;">🔥 ${labels.news || "News"}</h1>
     <ul id="newsList">${items}</ul>
-    <p id="expandNewsLink" style="cursor: pointer; color: #214B8C;">Show more...</p>
+    <p id="expandNewsLink" data-more="${labels.showMore || "Show more..."}" data-less="${labels.showLess || "Show less..."}" style="cursor: pointer; color: #214B8C;">${labels.showMore || "Show more..."}</p>
   `;
 }
 
@@ -26,7 +26,7 @@ export function bindNewsToggle(root = document) {
       item.style.display = expanded ? "none" : "list-item";
     });
 
-    toggle.textContent = expanded ? "Show more..." : "Show less...";
+    toggle.textContent = expanded ? toggle.dataset.more : toggle.dataset.less;
   });
 }
 
