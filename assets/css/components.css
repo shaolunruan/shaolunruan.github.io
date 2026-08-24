@@ -2,6 +2,80 @@
   display: none;
 }
 
+.masthead__language-item {
+  margin-left: auto;
+  padding-left: 1rem;
+}
+
+.language-toggle {
+  position: static !important;
+  min-width: auto;
+  height: auto !important;
+  padding: 0.5rem 0 0.5rem 1rem !important;
+  border: 0 !important;
+  border-radius: 0;
+  background: #fff !important;
+  color: #7a8288 !important;
+  font: inherit;
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.language-toggle:hover,
+.language-toggle:focus-visible {
+  color: #5c6266 !important;
+  background: #fff !important;
+}
+
+.language-icon {
+  display: block;
+  width: 1.45rem;
+  height: 1.28rem;
+  background-color: currentColor;
+  -webkit-mask: url("/assets/icons/language.svg") center / contain no-repeat;
+  mask: url("/assets/icons/language.svg") center / contain no-repeat;
+}
+
+.greedy-nav,
+.greedy-nav .visible-links {
+  width: 100%;
+}
+
+.greedy-nav .visible-links {
+  display: flex;
+  align-items: center;
+}
+
+.greedy-nav .visible-links li {
+  display: block;
+}
+
+html[lang="zh-CN"] body,
+html[lang="zh-CN"] h1,
+html[lang="zh-CN"] h2,
+html[lang="zh-CN"] h3,
+html[lang="zh-CN"] h4,
+html[lang="zh-CN"] h5,
+html[lang="zh-CN"] h6,
+html[lang="zh-CN"] .masthead__inner-wrap,
+html[lang="zh-CN"] .sidebar,
+html[lang="zh-CN"] .page__content,
+html[lang="zh-CN"] footer {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Noto Sans CJK SC", sans-serif;
+}
+
+@media (max-width: 520px) {
+  .masthead__language-item {
+    padding-left: 0.15rem;
+  }
+
+  .language-toggle {
+    padding-left: 0.5rem !important;
+  }
+}
+
 .tab-content {
   display: none;
 }
