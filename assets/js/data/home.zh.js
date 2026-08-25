@@ -59,18 +59,18 @@ export const newsItems = [
 export const honors = [
   "<em>2025 - </em> <a href='https://research.google/programs-and-events/phd-fellowship/recipients/' style='color: inherit; text-decoration: none;'>Google 博士生奖研金</a>",
   "<em>2025 - </em> <a href='https://ieeevis.org/year/2025/info/awards/best-paper-awards' style='color: inherit; text-decoration: none;'>IEEE VIS 2025 最佳论文荣誉提名奖</a>",
-  "<em>2024 - </em> <a href='https://graduatestudies.smu.edu.sg/phd/research-achievements/presidential-doctoral-fellowship' style='color: inherit; text-decoration: none;'>SMU 校长博士奖研金</a>",
-  "<em>2024 - </em> <a href='https://computing.smu.edu.sg/newsletter/scis-phd-deans-list-award-2024' style='color: inherit; text-decoration: none;'>SMU 计算机与信息系统学院院长荣誉榜奖项</a>",
-  "<em>2023 - </em> <a href='https://graduatestudies.smu.edu.sg/phd/research-achievements/presidential-doctoral-fellowship' style='color: inherit; text-decoration: none;'>SMU 校长博士奖研金</a>",
-  "<em>2019 - </em> <a href='' style='color: inherit; text-decoration: none;'>UESTC 计算机科学与工程学院优秀学生奖</a>",
+  "<em>2024 - </em> <a href='https://graduatestudies.smu.edu.sg/phd/research-achievements/presidential-doctoral-fellowship' style='color: inherit; text-decoration: none;'>SMU 年度校长博士奖学金</a>",
+  "<em>2024 - </em> <a href='https://computing.smu.edu.sg/newsletter/scis-phd-deans-list-award-2024' style='color: inherit; text-decoration: none;'>计算机与信息系统学院院长名单奖项</a>",
+  "<em>2023 - </em> <a href='https://graduatestudies.smu.edu.sg/phd/research-achievements/presidential-doctoral-fellowship' style='color: inherit; text-decoration: none;'>SMU 年度校长博士奖学金</a>",
+  "<em>2019 - </em> <a href='' style='color: inherit; text-decoration: none;'>UESTC 计算机科学与工程学院卓越毕业生奖</a>",
 ];
 
 export const educations = [
-  "<em>2026.05 至今</em>，博士后研究员，德国康斯坦茨大学，德国 🇪🇺。",
-  "<em>2024.12 – 2026.01</em>，访问学者，莫纳士大学，澳大利亚 🇦🇺。",
-  "<em>2022.01 – 2026.01</em>，计算机科学博士候选人，新加坡管理大学，新加坡 🇸🇬。",
-  "<em>2019.07 – 2021.09</em>，研究助理，肯特州立大学，美国 🇺🇸。",
-  "<em>2015.09 – 2019.07</em>，学士，电子科技大学，中国 🇨🇳。",
+  "<em>2026.05 至今</em>，博士后研究员，德国康斯坦茨大学，德国 🇪🇺",
+  "<em>2024.12 – 2026.01</em>，访问学者，莫纳士大学，澳大利亚 🇦🇺",
+  "<em>2022.01 – 2026.01</em>，博士候选人，新加坡管理大学，新加坡 🇸🇬",
+  "<em>2019.07 – 2021.09</em>，研究助理，肯特州立大学，美国 🇺🇸",
+  "<em>2015.09 – 2019.07</em>，学士，电子科技大学，中国 🇨🇳",
 ];
 
 export const invitedTalks = [
@@ -88,8 +88,8 @@ export const invitedTalks = [
 ];
 
 export const teaching = [
-  "<em>2025 年第二学期</em>，助教，FIT3179 数据可视化 Studio 6，莫纳士大学",
-  "<em>2025 年第二学期</em>，助教，FIT3179 数据可视化 Studio 12，莫纳士大学",
+  "<em>2025 年第二学期</em>，学生讲师，FIT3179 数据可视化 Studio 6，莫纳士大学",
+  "<em>2025 年第二学期</em>，学生讲师，FIT3179 数据可视化 Studio 12，莫纳士大学",
   "<em>2023–24 春季学期</em>，助教，IS428 商业智能可视分析，新加坡管理大学",
   "<em>2024–25 秋季学期</em>，助教，CS711 智能系统中的学习与规划，新加坡管理大学",
 ];
