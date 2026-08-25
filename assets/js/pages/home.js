@@ -8,7 +8,7 @@ import {
 } from "../components/sections.js?v=zh-demo-11";
 import { publicationTabs } from "../data/publications.js";
 import * as english from "../data/home.js?v=zh-demo-11";
-import * as chinese from "../data/home.zh.js?v=zh-demo-11";
+import * as chinese from "../data/home.zh.js?v=zh-demo-13";
 
 const locale = window.sessionStorage.getItem("homepage-language") === "zh" ? "zh" : "en";
 const data = locale === "zh" ? chinese : english;
@@ -48,7 +48,7 @@ const content = renderArticle(`
 `);
 
 mountPage({
-  title: locale === "zh" ? "阮劭伦 - 个人主页" : "Shaolun RUAN (阮劭伦) - Homepage",
+  title: locale === "zh" ? "Shaolun RUAN (阮劭伦) - 个人主页" : "Shaolun RUAN (阮劭伦) - Homepage",
   content,
   locale,
   showLanguageToggle: true,
