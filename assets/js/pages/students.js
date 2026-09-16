@@ -1,6 +1,6 @@
 import { getPreferredLocale, mountPage, renderArticle } from "../components/layout.js?v=zh-demo-11";
-import { renderStudentCards } from "../components/sections.js";
-import { students, studentsZh } from "../data/students.js?v=zh-demo-11";
+import { renderStudentCards } from "../components/sections.js?v=zh-demo-17";
+import { students, studentsZh } from "../data/students.js?v=zh-demo-17";
 
 const locale = getPreferredLocale();
 
