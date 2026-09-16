@@ -108,7 +108,7 @@ export function renderStudentCards(students) {
           <div class="custom-text">
             <p class="name">${student.name}</p>
             <p class="university">${student.university}</p>
-            <p class="degree">${student.degree}</p>
+            ${student.degree ? `<p class="degree">${student.degree}</p>` : ""}
             </br>
             <a href="mailto:${student.email}" class="email">${student.email}</a>
           </div>
