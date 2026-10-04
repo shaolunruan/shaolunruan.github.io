@@ -1,4 +1,4 @@
-import { publications } from "../data/publications.js?v=zh-demo-11";
+import { publications } from "../data/publications.js?v=pub-19";
 
 const publicationMap = new Map(publications.map((publication) => [publication.id, publication]));
 

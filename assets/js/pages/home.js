@@ -1,14 +1,14 @@
 import { mountPage, renderArticle } from "../components/layout.js?v=zh-demo-11";
-import { renderPublicationTabs, bindPublicationTabs } from "../components/publications.js?v=zh-demo-11";
+import { renderPublicationTabs, bindPublicationTabs } from "../components/publications.js?v=pub-19";
 import {
   bindNewsToggle,
   renderListSection,
   renderNewsSection,
   startTypingWords,
 } from "../components/sections.js?v=zh-demo-11";
-import { publicationTabs } from "../data/publications.js";
+import { publicationTabs } from "../data/publications.js?v=pub-19";
 import * as english from "../data/home.js?v=zh-demo-11";
-import * as chinese from "../data/home.zh.js?v=zh-demo-13";
+import * as chinese from "../data/home.zh.js?v=pub-19";
 
 const locale = window.sessionStorage.getItem("homepage-language") === "zh" ? "zh" : "en";
 const data = locale === "zh" ? chinese : english;

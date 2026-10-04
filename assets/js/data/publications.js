@@ -1,5 +1,55 @@
 export const publications = [
   {
+    id: "mdt-room",
+    image: "/assets/images/mdt-room.png",
+    title:
+      "Within the MDT Room: Situated in Multidisciplinary Team-Grounded Agent Debate for Clinical Diagnosis",
+    authors:
+      "Peng Kuai, Yukun Yang, <strong>Shaolun Ruan</strong>, Junchi Xu, Yanjie Zhang, Lin Zhang, Min Zhu, and Rui Sheng",
+    venue: "arXiv preprint arXiv:2603.28393 (2026).",
+    links: [
+      { label: "[arxiv]", href: "https://arxiv.org/pdf/2603.28393" },
+    ],
+  },
+  {
+    id: "inconlens",
+    image: "/assets/images/inconlens.png",
+    title:
+      "InconLens: Interactive Visual Diagnosis of Behavioral Inconsistencies in LLM-based Agentic Systems",
+    authors:
+      "Shuo Yan, Xiaolin Wen, <strong>Shaolun Ruan</strong>, Yanjie Zhang, Jiaming Mi, Yushi Sun, Huamin Qu, and Rui Sheng",
+    venue: "arXiv preprint arXiv:2603.28106 (2026).",
+    links: [
+      { label: "[arxiv]", href: "https://arxiv.org/pdf/2603.28106" },
+    ],
+  },
+  {
+    id: "accessible-spatial-audio",
+    badge: "IEEE CG&A",
+    image: "/assets/images/accessible-spatial-audio.png",
+    title: "Accessible Fine-grained Data Representation via Spatial Audio",
+    authors:
+      "Can Liu, Wenjie Jiang, <strong>Shaolun Ruan</strong>, Kotaro Hara, and Yong Wang",
+    venue: "IEEE Computer Graphics and Applications (CG&A 2026).",
+    links: [
+      { label: "[pdf]", href: "https://arxiv.org/pdf/2604.08979" },
+    ],
+  },
+  {
+    id: "vis4qc-survey",
+    image: "/assets/images/vis4qc-survey.png",
+    title: "Visualization for Quantum Computing: Current State and Future Directions",
+    authors:
+      "Feng Liang, Xiaolin Wen, Shixian Zhou, <strong>Shaolun Ruan</strong>, Yuxuan Du, Qiang Guan, Jun Ye, and Yong Wang",
+    venue: "Under review by IEEE TVCG.",
+    links: [
+      {
+        label: "[pdf]",
+        href: "https://www.researchgate.net/profile/Feng-Liang-55/publication/404040113_Visualization_for_Quantum_Computing_Current_State_and_Future_Directions/links/69ee17adb2e0972eb41c5284/Visualization-for-Quantum-Computing-Current-State-and-Future-Directions.pdf",
+      },
+    ],
+  },
+  {
     id: "llm-design-study",
     badge: "IEEE TVCG",
     image: "/assets/images/LLM-DesignStudy.png",
@@ -30,7 +80,7 @@ export const publications = [
     links: [
       { label: "[pdf]", href: "https://arxiv.org/pdf/2503.00835" },
       {
-        html: '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1200px-YouTube_Logo_2017.svg.png" alt="YouTube" width="64">',
+        html: '<i class="fab fa-youtube" aria-hidden="true" style="font-size:1.55em;color:#ff0000;vertical-align:middle;"></i><span class="sr-only">YouTube</span>',
         href: "https://www.youtube.com/watch?v=qgQwEXr4GXE",
       },
       {
@@ -70,6 +120,7 @@ export const publications = [
       "<strong>Shaolun Ruan</strong>, Feng Liang, Rohan Ramakrishna, Chao Ren, Rudai Yan, Qiang Guan, Jiannan Li, Yong Wang",
     venue: "IEEE Transactions on Visualization and Computer Graphics (TVCG 2026).",
     links: [
+      { label: "[pdf]", href: "https://arxiv.org/pdf/2512.14181" },
       {
         html: '<img src="https://img.shields.io/badge/%F0%9F%A4%97%20XQAI_Eyes%20system-blue?label=Demo" alt="Demo badge">',
         href: "https://q-encoder-vis.vercel.app/",
@@ -179,7 +230,7 @@ export const publications = [
     links: [
       { label: "[pdf]", href: "https://arxiv.org/abs/2507.15620" },
       {
-        html: '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1200px-YouTube_Logo_2017.svg.png" alt="YouTube" width="64">',
+        html: '<i class="fab fa-youtube" aria-hidden="true" style="font-size:1.55em;color:#ff0000;vertical-align:middle;"></i><span class="sr-only">YouTube</span>',
         href: "https://drive.google.com/file/d/1502KQQtGszmyiIb2yQdfjKhuRYL4oAT1/view?usp=drive_link",
       },
       {
@@ -200,7 +251,7 @@ export const publications = [
     links: [
       { label: "[pdf]", href: "https://arxiv.org/pdf/2412.00729" },
       {
-        html: '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1200px-YouTube_Logo_2017.svg.png" alt="YouTube" width="64">',
+        html: '<i class="fab fa-youtube" aria-hidden="true" style="font-size:1.55em;color:#ff0000;vertical-align:middle;"></i><span class="sr-only">YouTube</span>',
         href: "https://drive.google.com/file/d/1QICOnXYiEsf2871hXnAZXKMS4QIEn04x/view?usp=drive_link",
       },
       {
@@ -289,28 +340,36 @@ export const publications = [
 
 export const publicationTabs = [
   {
-    id: "designstudy",
-    label: "VIS/AR Design Study",
-    publicationIds: ["llm-design-study", "intuit", "intercept-graph"],
+    id: "llm-for-vis",
+    label: "LLM for Visualization",
+    publicationIds: ["llm-design-study", "mdt-room", "inconlens"],
   },
   {
     id: "va1",
     label: "VIS for Quantum Computing",
-    publicationIds: ["xqai", "quantumeyes", "violet", "venus", "vacsen"],
-  },
-  {
-    id: "va2",
-    label: "VIS for Biomedical",
-    publicationIds: ["trajlens", "synthlens", "cellscout", "imagene"],
+    publicationIds: ["vis4qc-survey", "xqai", "quantumeyes", "violet", "venus", "vacsen"],
   },
   {
     id: "va3",
     label: "Visual Analytics",
-    publicationIds: ["batchlens", "ponzilens", "storyexplorer", "visilience"],
+    publicationIds: [
+      "trajlens",
+      "synthlens",
+      "cellscout",
+      "imagene",
+      "batchlens",
+      "ponzilens",
+      "storyexplorer",
+      "visilience",
+    ],
   },
 ];
 
 export const allPublicationIds = [
+  "mdt-room",
+  "inconlens",
+  "accessible-spatial-audio",
+  "vis4qc-survey",
   "cellscout",
   "xqai",
   "llm-design-study",

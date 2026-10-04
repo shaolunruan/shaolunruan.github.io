@@ -91,7 +91,7 @@ export const teaching = [
   "<em>2025 年第二学期</em>，学生讲师，FIT3179 数据可视化 Studio 6，莫纳士大学",
   "<em>2025 年第二学期</em>，学生讲师，FIT3179 数据可视化 Studio 12，莫纳士大学",
   "<em>2023–24 春季学期</em>，助教，IS428 商业智能可视分析，新加坡管理大学",
-  "<em>2024–25 秋季学期</em>，助教，CS711 智能系统中的学习与规划，新加坡管理大学",
+  "<em>2024–25 秋季学期</em>，助教，CS711 强化学习，新加坡管理大学",
 ];
 
 export const labels = {
@@ -101,7 +101,7 @@ export const labels = {
   showLess: "收起…",
   featuredPublications: "代表性论文",
   allPublications: "查看全部论文…",
-  publicationTabs: ["可视化与增强现实设计研究", "面向量子计算的可视化", "面向生物医学的可视化", "可视分析"],
+  publicationTabs: ["大语言模型与可视化", "面向量子计算的可视化", "可视分析"],
   honors: "🎖 荣誉与奖励",
   experience: "📖 教育与工作经历",
   invitedTalks: "💬 受邀报告",
