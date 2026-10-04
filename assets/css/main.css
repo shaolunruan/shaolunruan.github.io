@@ -3695,8 +3695,9 @@ img.mfp-img {
   width: 280px;
   height: 150px;
   box-shadow: 3px 3px 6px #888;
-  /* object-fit: cover; */
-  /* margin-top: 20px; */
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
 }
 .paper-box .paper-box-text {
   max-width: 100%;
@@ -4022,5 +4023,4 @@ color: rgb(32, 72, 159);
 text-decoration: underline;  
 font-size: 1.05em;
 }
-
 
