@@ -1,4 +1,4 @@
-import { publications } from "../data/publications.js?v=pub-19";
+import { publications } from "../data/publications.js?v=lang-ui-6";
 
 const publicationMap = new Map(publications.map((publication) => [publication.id, publication]));
 
@@ -24,7 +24,9 @@ export function renderPublicationCard(publication, locale = "en") {
 
   const venueNote = locale === "zh" && publication.venueNoteZh
     ? publication.venueNoteZh
-    : publication.venueNote;
+    : locale === "de" && publication.venueNoteDe
+      ? publication.venueNoteDe
+      : publication.venueNote;
   const venueHtml = publication.venue
     ? `<p style="font-style: italic; font-size: 0.9em;">${publication.venue}${venueNote ? `<br><font style="color: rgb(193, 19, 19);">${venueNote}</font>` : ""}</p>`
     : "";

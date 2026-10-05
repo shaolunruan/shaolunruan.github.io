@@ -51,8 +51,19 @@ export const siteTranslations = {
     profileDescription: profile.description,
     locationHtml: '<i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Germany 🇪🇺',
     footerText: footer.text,
-    languageLabel: "中文",
-    languageAriaLabel: "切换到中文",
+  },
+  de: {
+    navItems: [
+      { href: "/", label: "Startseite" },
+      { href: "/publication/", label: "Publikationen" },
+      { href: "/CV/", label: "Lebenslauf" },
+      { href: "/student/", label: "Studierende" },
+      { href: "/life/", label: "Privates" },
+    ],
+    profileBio: "Labor für Datenanalyse und Visualisierung",
+    profileDescription: "Postdoktorand an der Universität Konstanz mit den Forschungsschwerpunkten Datenvisualisierung und Mensch-Computer-Interaktion.",
+    locationHtml: '<i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Deutschland 🇪🇺',
+    footerText: "Persönliche Website von Shaolun Ruan · Alle Rechte vorbehalten.",
   },
   zh: {
     navItems: [
@@ -66,7 +77,5 @@ export const siteTranslations = {
     profileDescription: "德国康斯坦茨大学博士后研究员，研究方向为数据可视化与人机交互。",
     locationHtml: '<i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> 德国 🇪🇺',
     footerText: "阮劭伦个人网站 · 保留所有权利。",
-    languageLabel: "EN",
-    languageAriaLabel: "Switch to English",
   },
 };

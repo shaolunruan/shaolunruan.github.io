@@ -63,6 +63,7 @@ export const publications = [
     venue: "IEEE Transactions on Visualization and Computer Graphics (TVCG 2025).",
     venueNote: "IEEE VIS 2025 Best Paper Honorable Mention Award",
     venueNoteZh: "IEEE VIS 2025 最佳论文荣誉提名奖",
+    venueNoteDe: "IEEE VIS 2025 – Ehrenvolle Erwähnung für die beste Arbeit",
     links: [
       { label: "[pdf]", href: "https://arxiv.org/abs/2507.10024" },
     ],

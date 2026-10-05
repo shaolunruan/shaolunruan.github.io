@@ -1,5 +1,5 @@
 export const introHtml = `
-  <h1 style="font-size: 1.7em;">你好，我是阮劭伦</h1>
+  <h1 class="zh-intro-title" style="font-size: 2.1em;">你好，我是阮劭伦</h1>
   <p style="font-size: 1.2em;">
     我目前在德国康斯坦茨大学从事博士后研究，合作导师为
     <a class="blue-link" href="https://www.uni-konstanz.de/centre-for-human-data-society/people/prof-dr-daniel-keim/">Daniel A. Keim 教授</a>。

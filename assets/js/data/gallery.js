@@ -25,6 +25,7 @@ export const galleryGroups = [
 ];
 
 export const galleryQuoteZh = "“再美好的未来，也不值得错过四季的风景。”";
+export const galleryQuoteDe = "„Keine noch so großartige Zukunft ist es wert, die Schönheit aller vier Jahreszeiten zu verpassen.“";
 
 const galleryCaptionsZh = [
   "中国兰州，2025", "意大利威尼斯，2025", "日本东京，2024", "澳大利亚墨尔本，2025", "日本富士山，2024",
@@ -36,5 +37,18 @@ export const galleryGroupsZh = galleryGroups.map((group, groupIndex) =>
   group.map((item, itemIndex) => ({
     ...item,
     caption: galleryCaptionsZh[groupIndex * 5 + itemIndex],
+  })),
+);
+
+const galleryCaptionsDe = [
+  "Lanzhou, China, 2025", "Venedig, Italien, 2025", "Tokio, Japan, 2024", "Melbourne, Australien, 2025", "Berg Fuji, Japan, 2024",
+  "Eiffelturm, Paris, 2023", "Brighton Beach, Melbourne, 2017", "Leipziger Platz, Deutschland, 2023", "Erster Tag der Promotion, Singapur, 2022", "Winter in Edinburgh, 2022",
+  "HKUST-Wiedersehen, Melbourne, 2023", "Abschluss an der UESTC, China, 2019", "Morgendämmerung in Auckland, 2017", "Heiligabend in London, 2022", "Bintan, Indonesien, 2022",
+];
+
+export const galleryGroupsDe = galleryGroups.map((group, groupIndex) =>
+  group.map((item, itemIndex) => ({
+    ...item,
+    caption: galleryCaptionsDe[groupIndex * 5 + itemIndex],
   })),
 );

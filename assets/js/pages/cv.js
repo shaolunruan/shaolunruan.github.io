@@ -1,4 +1,4 @@
-import { getPreferredLocale, mountPage, renderArticle } from "../components/layout.js?v=zh-demo-11";
+import { getPreferredLocale, mountPage, renderArticle } from "../components/layout.js?v=lang-ui-6";
 
 const locale = getPreferredLocale();
 const resumeSrc = locale === "zh"
@@ -10,7 +10,7 @@ const content = renderArticle(`
 `);
 
 mountPage({
-  title: locale === "zh" ? "阮劭伦 - 个人简历" : "Shaolun RUAN (阮劭伦) - CV",
+  title: locale === "zh" ? "阮劭伦 - 个人简历" : locale === "de" ? "Shaolun RUAN (阮劭伦) – Lebenslauf" : "Shaolun RUAN (阮劭伦) - CV",
   content,
   locale,
 });

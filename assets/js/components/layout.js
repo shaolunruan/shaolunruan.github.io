@@ -1,4 +1,6 @@
-import { footer, profile, siteTranslations } from "../data/site.js?v=zh-demo-11";
+import { footer, profile, siteTranslations } from "../data/site.js?v=lang-ui-6";
+
+const localeFlags = { en: "🇬🇧", de: "🇩🇪", zh: "🇨🇳" };
 
 function normalizePath(path) {
   if (!path) return "/";
@@ -10,14 +12,14 @@ function isActivePath(href) {
   return normalizePath(window.location.pathname) === normalizePath(href);
 }
 
-export function renderNav(locale = "en", showLanguageToggle = false) {
+export function renderNav(locale = "en", showLanguageToggle = true) {
   const translations = siteTranslations[locale] || siteTranslations.en;
   const items = translations.navItems
     .map((item, index) => {
       const classes = ["masthead__menu-item"];
       if (index === 0) classes.push("masthead__menu-item--lg", "masthead__menu-home-item");
       const current = isActivePath(item.href) ? ' aria-current="page"' : "";
-      const versionedHref = `${item.href}?v=zh-demo-11`;
+      const versionedHref = `${item.href}?v=lang-ui-6`;
       return `<li class="${classes.join(" ")}"><a href="${versionedHref}"${current}>${item.label}</a></li>`;
     })
     .join("");
@@ -30,9 +32,20 @@ export function renderNav(locale = "en", showLanguageToggle = false) {
             <ul class="visible-links">
               ${items}
               ${showLanguageToggle ? `<li class="masthead__menu-item masthead__language-item">
-                <button id="language-toggle" class="language-toggle" type="button" aria-label="${translations.languageAriaLabel}" title="${translations.languageAriaLabel}">
-                  <span class="language-icon" aria-hidden="true"></span>
-                </button>
+                <div class="language-selector">
+                  <span class="language-selector__label">Language:</span>
+                  <div class="language-menu-wrap">
+                    <button id="language-menu-trigger" class="language-menu-trigger" type="button" aria-label="Choose language" aria-haspopup="true" aria-expanded="false">
+                      <span aria-hidden="true">${localeFlags[locale] || localeFlags.en}</span>
+                      <i class="fas fa-caret-down language-menu-caret" aria-hidden="true"></i>
+                    </button>
+                    <div id="language-menu" class="language-menu" role="menu" hidden>
+                      <button type="button" role="menuitem" data-locale="en"${locale === "en" ? ' aria-current="true"' : ""}>English</button>
+                      <button type="button" role="menuitem" data-locale="de"${locale === "de" ? ' aria-current="true"' : ""}>Deutsch</button>
+                      <button type="button" role="menuitem" data-locale="zh"${locale === "zh" ? ' aria-current="true"' : ""}>中文</button>
+                    </div>
+                  </div>
+                </div>
               </li>` : ""}
             </ul>
             <ul class="hidden-links hidden"></ul>
@@ -122,9 +135,9 @@ function mountFooterCounter() {
   mountPoint.after(script);
 }
 
-export function mountPage({ title, content, showSidebar = true, mainRole = "main", mainClass = "", locale = "en", showLanguageToggle = false }) {
+export function mountPage({ title, content, showSidebar = true, mainRole = "main", mainClass = "", locale = "en", showLanguageToggle = true }) {
   document.title = title;
-  document.documentElement.lang = locale === "zh" ? "zh-CN" : "en";
+  document.documentElement.lang = locale === "zh" ? "zh-CN" : locale;
 
   const app = document.getElementById("app");
   const sidebar = showSidebar ? renderSidebar(locale) : "";
@@ -141,13 +154,43 @@ export function mountPage({ title, content, showSidebar = true, mainRole = "main
   enhanceExternalLinks(app);
   mountFooterCounter();
 
-  app.querySelector("#language-toggle")?.addEventListener("click", () => {
-    const nextLocale = locale === "zh" ? "en" : "zh";
-    window.sessionStorage.setItem("homepage-language", nextLocale);
-    window.location.reload();
+  const languageTrigger = app.querySelector("#language-menu-trigger");
+  const languageMenu = app.querySelector("#language-menu");
+
+  languageTrigger?.addEventListener("click", () => {
+    const shouldOpen = languageMenu.hidden;
+    languageMenu.hidden = !shouldOpen;
+    languageTrigger.setAttribute("aria-expanded", String(shouldOpen));
+  });
+
+  languageMenu?.querySelectorAll("[data-locale]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const nextLocale = button.dataset.locale;
+      if (!siteTranslations[nextLocale] || nextLocale === locale) {
+        languageMenu.hidden = true;
+        languageTrigger.setAttribute("aria-expanded", "false");
+        return;
+      }
+      window.sessionStorage.setItem("homepage-language", nextLocale);
+      window.location.reload();
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!languageMenu || languageMenu.hidden || event.target.closest(".language-menu-wrap")) return;
+    languageMenu.hidden = true;
+    languageTrigger?.setAttribute("aria-expanded", "false");
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !languageMenu || languageMenu.hidden) return;
+    languageMenu.hidden = true;
+    languageTrigger?.setAttribute("aria-expanded", "false");
+    languageTrigger?.focus();
   });
 }
 
 export function getPreferredLocale() {
-  return window.sessionStorage.getItem("homepage-language") === "zh" ? "zh" : "en";
+  const locale = window.sessionStorage.getItem("homepage-language");
+  return ["en", "de", "zh"].includes(locale) ? locale : "en";
 }

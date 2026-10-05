@@ -1,19 +1,22 @@
-import { mountPage, renderArticle } from "../components/layout.js?v=zh-demo-11";
-import { renderPublicationTabs, bindPublicationTabs } from "../components/publications.js?v=pub-19";
+import { getPreferredLocale, mountPage, renderArticle } from "../components/layout.js?v=lang-ui-6";
+import { renderPublicationTabs, bindPublicationTabs } from "../components/publications.js?v=lang-ui-6";
 import {
   bindNewsToggle,
   renderListSection,
   renderNewsSection,
   startTypingWords,
-} from "../components/sections.js?v=zh-demo-11";
-import { publicationTabs } from "../data/publications.js?v=pub-19";
-import * as english from "../data/home.js?v=zh-demo-11";
-import * as chinese from "../data/home.zh.js?v=pub-19";
+} from "../components/sections.js?v=lang-ui-6";
+import { publicationTabs } from "../data/publications.js?v=lang-ui-6";
+import * as english from "../data/home.js?v=lang-ui-6";
+import * as german from "../data/home.de.js?v=lang-ui-6";
+import * as chinese from "../data/home.zh.js?v=lang-ui-6";
 
-const locale = window.sessionStorage.getItem("homepage-language") === "zh" ? "zh" : "en";
-const data = locale === "zh" ? chinese : english;
+const locale = getPreferredLocale();
+const data = locale === "zh" ? chinese : locale === "de" ? german : english;
 const labels = locale === "zh"
   ? chinese.labels
+  : locale === "de"
+    ? german.labels
   : {
       like: "I like",
       news: "News",
@@ -48,7 +51,11 @@ const content = renderArticle(`
 `);
 
 mountPage({
-  title: locale === "zh" ? "Shaolun RUAN (阮劭伦) - 个人主页" : "Shaolun RUAN (阮劭伦) - Homepage",
+  title: locale === "zh"
+    ? "Shaolun RUAN (阮劭伦) - 个人主页"
+    : locale === "de"
+      ? "Shaolun RUAN (阮劭伦) – Startseite"
+      : "Shaolun RUAN (阮劭伦) - Homepage",
   content,
   locale,
   showLanguageToggle: true,
@@ -56,4 +63,4 @@ mountPage({
 
 bindPublicationTabs(document);
 bindNewsToggle(document);
-startTypingWords(english.typingWords, document);
+startTypingWords(data.typingWords, document);
