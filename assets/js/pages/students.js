@@ -1,6 +1,6 @@
 import { getPreferredLocale, mountPage, renderArticle } from "../components/layout.js?v=lang-ui-6";
-import { renderStudentCards } from "../components/sections.js?v=lang-ui-6";
-import { students, studentsDe, studentsZh } from "../data/students.js?v=lang-ui-6";
+import { renderStudentCards } from "../components/sections.js?v=student-xingyu-1";
+import { students, studentsDe, studentsZh } from "../data/students.js?v=student-xingyu-1";
 
 const locale = getPreferredLocale();
 
