@@ -10,7 +10,7 @@ export const profile = {
   name: "Shaolun RUAN (阮劭伦)",
   bio: "Data Analysis and Visualization Lab",
   description: "Postdoctoral Researcher at the University of Konstanz, working in Data Visualization and Human-Computer Interaction.",
-  avatar: "/assets/images/IMG_8212.JPG",
+  avatar: "/assets/images/profile-photo-2026.png?v=20261010",
   email: "slruan.2021@phdcs.smu.edu.sg",
   location: "Germany 🇪🇺",
   links: [
