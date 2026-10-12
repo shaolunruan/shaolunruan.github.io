@@ -15,9 +15,7 @@ export const introHtml = `
     Monash University under the supervision of Professor
     <a class="blue-link" href="https://marvl.infotech.monash.edu/~dwyer/">Tim Dwyer</a> in 2025.
     <br><br>
-    My research interests include <b>Data Visualization</b> and <b>Human-Computer Interaction</b>.
-    My work focuses on developing human-centered computing tools to address complex scientific problems,
-    facilitating the process of explainability and data-driven decision-making.
+    My research focuses on <b>Human-AI Collaboration</b> and <b>Visual Analytics</b>, combining human expertise with AI capabilities to support domain-specific problem solving through AI-assisted analysis, explainable insights, and informed decision-making.
     <br>
   </p>
 `;

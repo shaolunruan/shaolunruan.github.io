@@ -11,9 +11,7 @@ export const introHtml = `
     an der Monash University tätig und arbeitete dort mit Professor
     <a class="blue-link" href="https://marvl.infotech.monash.edu/~dwyer/">Tim Dwyer</a> zusammen.
     <br><br>
-    Meine Forschungsschwerpunkte sind <b>Datenvisualisierung</b> und <b>Mensch-Computer-Interaktion</b>.
-    Ich entwickle menschenzentrierte Werkzeuge für komplexe wissenschaftliche Fragestellungen, um
-    Erklärbarkeit und datenbasierte Entscheidungsfindung zu unterstützen.
+    Meine Forschung konzentriert sich auf <b>Mensch-KI-Zusammenarbeit</b> und <b>Visuelle Analytik</b>. Dabei verbinde ich menschliche Expertise mit den Fähigkeiten künstlicher Intelligenz, um domänenspezifische Problemlösungen durch KI-gestützte Analysen, erklärbare Erkenntnisse und fundierte Entscheidungen zu unterstützen.
     <br>
   </p>
 `;
@@ -103,7 +101,7 @@ export const labels = {
   showLess: "Weniger anzeigen …",
   featuredPublications: "Ausgewählte Publikationen",
   allPublications: "Alle Publikationen anzeigen …",
-  publicationTabs: ["LLM für Visualisierung", "Visualisierung für Quantencomputing", "Visuelle Analytik"],
+  publicationTabs: ["Mensch-KI-Zusammenarbeit", "Visualisierung für Quantencomputing", "Visuelle Analytik"],
   honors: "🎖 Auszeichnungen",
   experience: "📖 Ausbildung und Berufserfahrung",
   invitedTalks: "💬 Eingeladene Vorträge",

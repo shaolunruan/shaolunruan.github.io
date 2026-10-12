@@ -1,4 +1,4 @@
-import { footer, profile, siteTranslations } from "../data/site.js?v=lang-ui-6";
+import { footer, profile, siteTranslations } from "../data/site.js?v=human-ai-2";
 
 const localeFlags = { en: "🇬🇧", de: "🇩🇪", zh: "🇨🇳" };
 

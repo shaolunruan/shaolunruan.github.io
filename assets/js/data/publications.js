@@ -342,7 +342,7 @@ export const publications = [
 export const publicationTabs = [
   {
     id: "llm-for-vis",
-    label: "LLM for Visualization",
+    label: "Human-AI Collaboration",
     publicationIds: ["llm-design-study", "mdt-room", "inconlens"],
   },
   {

@@ -1,15 +1,15 @@
-import { getPreferredLocale, mountPage, renderArticle } from "../components/layout.js?v=lang-ui-6";
-import { renderPublicationTabs, bindPublicationTabs } from "../components/publications.js?v=lang-ui-6";
+import { getPreferredLocale, mountPage, renderArticle } from "../components/layout.js?v=human-ai-3";
+import { renderPublicationTabs, bindPublicationTabs } from "../components/publications.js?v=human-ai-3";
 import {
   bindNewsToggle,
   renderListSection,
   renderNewsSection,
   startTypingWords,
-} from "../components/sections.js?v=lang-ui-6";
-import { publicationTabs } from "../data/publications.js?v=lang-ui-6";
-import * as english from "../data/home.js?v=lang-ui-6";
-import * as german from "../data/home.de.js?v=lang-ui-6";
-import * as chinese from "../data/home.zh.js?v=lang-ui-6";
+} from "../components/sections.js?v=human-ai-3";
+import { publicationTabs } from "../data/publications.js?v=human-ai-3";
+import * as english from "../data/home.js?v=human-ai-3";
+import * as german from "../data/home.de.js?v=human-ai-3";
+import * as chinese from "../data/home.zh.js?v=human-ai-3";
 
 const locale = getPreferredLocale();
 const data = locale === "zh" ? chinese : locale === "de" ? german : english;

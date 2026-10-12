@@ -10,8 +10,7 @@ export const introHtml = `
     2025 年，我曾在莫纳士大学担任访问学者，合作导师为
     <a class="blue-link" href="https://marvl.infotech.monash.edu/~dwyer/">Tim Dwyer 教授</a>。
     <br><br>
-    我的研究方向包括<b>数据可视化</b>与<b>人机交互</b>。我的工作致力于开发以人为中心的计算工具，
-    解决复杂的科学问题，并促进可解释性分析与数据驱动决策。
+    我的研究聚焦于<b>人机智能协作</b>与<b>可视分析</b>，通过结合人的专业知识与人工智能能力，以人工智能辅助分析、可解释洞见和明智决策支持特定领域的问题求解。
     <br>
   </p>
 `;
@@ -101,7 +100,7 @@ export const labels = {
   showLess: "收起…",
   featuredPublications: "代表性论文",
   allPublications: "查看全部论文…",
-  publicationTabs: ["大语言模型与可视化", "面向量子计算的可视化", "可视分析"],
+  publicationTabs: ["人机智能协作", "面向量子计算的可视化", "可视分析"],
   honors: "🎖 荣誉与奖励",
   experience: "📖 教育与工作经历",
   invitedTalks: "💬 受邀报告",
