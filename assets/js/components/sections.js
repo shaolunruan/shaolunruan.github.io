@@ -101,21 +101,23 @@ export function renderStudentCards(students) {
   const cards = students
     .map(
       (student) => `
-        <li class="custom-item">
-          <div class="custom-image">
-            <img src="${student.image}" alt="${student.name}">
+        <li class="student-card">
+          <div class="student-card__image">
+            <img src="${student.image}" alt="${student.name}"${student.imagePosition ? ` style="object-position: ${student.imagePosition};"` : ""}>
           </div>
-          <div class="custom-text">
-            <p class="name">${student.name}</p>
-            <p class="university">${student.university}</p>
-            ${student.degree ? `<p class="degree">${student.degree}</p>` : ""}
-            </br>
-            <a href="mailto:${student.email}" class="email">${student.email}</a>
+          <div class="student-card__content">
+            <h2 class="student-card__name">${student.name}</h2>
+            <p class="student-card__university">${student.university}</p>
+            ${student.degree ? `<p class="student-card__degree">${student.degree}</p>` : ""}
+            <a href="mailto:${student.email}" class="student-card__email" aria-label="Email ${student.name}">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <span>${student.email}</span>
+            </a>
           </div>
         </li>
       `,
     )
     .join("");
 
-  return `<ul class="custom-list">${cards}</ul>`;
+  return `<ul class="student-grid">${cards}</ul>`;
 }
