@@ -8,8 +8,8 @@ const carouselCopy = {
   en: {
     label: "Memory music carousel", previous: "Previous memory", next: "Next memory", play: "Play this memory", pause: "Pause this memory",
     tracks: [
-      { title: "水平線", meta: "back number · 2021", color: "horizon" },
-      { title: "Harvest", meta: "NIKIIE · 2016", color: "blue" },
+      { title: "水平線", meta: "back number · 2021", color: "blue" },
+      { title: "Harvest", meta: "NIKIIE · 2016", color: "horizon" },
       { title: "seeds", meta: "NIKIIE · 2016", color: "deepblue" },
       { title: "クリスマスソング (Christmas Song)", meta: "back number · 2015", color: "christmas" },
     ],
@@ -17,8 +17,8 @@ const carouselCopy = {
   de: {
     label: "Musikkarussell der Erinnerungen", previous: "Vorherige Erinnerung", next: "Nächste Erinnerung", play: "Diese Erinnerung abspielen", pause: "Diese Erinnerung pausieren",
     tracks: [
-      { title: "水平線", meta: "back number · 2021", color: "horizon" },
-      { title: "Harvest", meta: "NIKIIE · 2016", color: "blue" },
+      { title: "水平線", meta: "back number · 2021", color: "blue" },
+      { title: "Harvest", meta: "NIKIIE · 2016", color: "horizon" },
       { title: "seeds", meta: "NIKIIE · 2016", color: "deepblue" },
       { title: "クリスマスソング (Christmas Song)", meta: "back number · 2015", color: "christmas" },
     ],
@@ -26,8 +26,8 @@ const carouselCopy = {
   zh: {
     label: "回忆音乐轮播", previous: "上一段回忆", next: "下一段回忆", play: "播放这段回忆", pause: "暂停这段回忆",
     tracks: [
-      { title: "水平線", meta: "back number · 2021", color: "horizon" },
-      { title: "Harvest", meta: "NIKIIE · 2016", color: "blue" },
+      { title: "水平線", meta: "back number · 2021", color: "blue" },
+      { title: "Harvest", meta: "NIKIIE · 2016", color: "horizon" },
       { title: "seeds", meta: "NIKIIE · 2016", color: "deepblue" },
       { title: "クリスマスソング (Christmas Song)", meta: "back number · 2015", color: "christmas" },
     ],
@@ -56,7 +56,11 @@ const players = copy.tracks.map((track, index) => `
           <div class="cartoon-tonearm"><span></span></div>
           <span class="cartoon-knob cartoon-knob--one"></span><span class="cartoon-knob cartoon-knob--two"></span>
         </div>
-        <div class="cartoon-player__notes" aria-hidden="true"><span>♪</span><span>♫</span><span>♪</span></div>
+        <div class="cartoon-player__notes" aria-hidden="true">
+          ${track.color === "christmas"
+            ? '<span class="christmas-cane"></span><span class="christmas-star"></span><span class="christmas-stocking"></span>'
+            : '<span>♪</span><span>♫</span><span>♪</span>'}
+        </div>
       </div>
       <div class="cartoon-player__info">
         <p>${track.meta}</p><div class="cartoon-player__title-window"><h2>${track.title}</h2></div>
