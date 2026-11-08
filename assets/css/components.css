@@ -998,6 +998,9 @@ html[lang="zh-CN"] .zh-intro-title {
 }
 
 .cartoon-player__notes span {
+  --float-x: -8px;
+  --float-y: -30px;
+  --float-rotate: 9deg;
   position: absolute;
   color: #30343b;
   font-size: 1.7rem;
@@ -1005,12 +1008,84 @@ html[lang="zh-CN"] .zh-intro-title {
   opacity: 0;
 }
 
-.cartoon-player__notes span:nth-child(1) { top: 38%; left: 29%; }
-.cartoon-player__notes span:nth-child(2) { top: 20%; left: 48%; }
-.cartoon-player__notes span:nth-child(3) { top: 32%; left: 67%; }
+.cartoon-player__notes span:nth-child(1) { top: 38%; left: 29%; --float-x: -16px; --float-y: -43px; --float-rotate: -10deg; }
+.cartoon-player__notes span:nth-child(2) { top: 20%; left: 48%; --float-x: 2px; --float-y: -51px; --float-rotate: 5deg; }
+.cartoon-player__notes span:nth-child(3) { top: 32%; left: 67%; --float-x: 17px; --float-y: -41px; --float-rotate: 11deg; }
+
+.cartoon-player--christmas .cartoon-player__notes span:nth-child(1) { top: 42%; left: 24%; }
+.cartoon-player--christmas .cartoon-player__notes span:nth-child(2) { top: 18%; left: 43%; }
+.cartoon-player--christmas .cartoon-player__notes span:nth-child(3) { top: 29%; left: 62%; }
+
+.cartoon-player--christmas .cartoon-player__notes span:nth-child(1) { --float-x: -17px; --float-y: -46px; --float-rotate: -11deg; }
+.cartoon-player--christmas .cartoon-player__notes span:nth-child(2) { --float-x: 2px; --float-y: -53px; --float-rotate: 5deg; }
+.cartoon-player--christmas .cartoon-player__notes span:nth-child(3) { --float-x: 18px; --float-y: -43px; --float-rotate: 12deg; }
+
+.cartoon-player--christmas .cartoon-player__notes .christmas-cane {
+  width: 11px;
+  height: 27px;
+  border: 2px solid #30343b;
+  border-radius: 8px 8px 5px 5px;
+  background: repeating-linear-gradient(-45deg, #fff4df 0 5px, #c64d49 5px 10px);
+  box-shadow: 2px 2px 0 rgba(48, 52, 59, 0.18);
+}
+
+.cartoon-player--christmas .cartoon-player__notes .christmas-star {
+  width: 23px;
+  height: 23px;
+}
+
+.christmas-star::before {
+  color: #f5d36b;
+  content: "★";
+  font-family: "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+  font-size: 1.45rem;
+  line-height: 1;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 4px #30343b;
+  text-shadow: 2px 2px 0 rgba(48, 52, 59, 0.18);
+}
+
+.cartoon-player--christmas .cartoon-player__notes .christmas-stocking {
+  width: 15px;
+  height: 22px;
+  border: 2px solid #30343b;
+  border-radius: 3px 3px 8px 6px;
+  background: #c64d49;
+  box-shadow: 2px 2px 0 rgba(48, 52, 59, 0.18);
+}
+
+.christmas-stocking::before {
+  position: absolute;
+  top: -7px;
+  left: -4px;
+  width: 19px;
+  height: 8px;
+  border: 2px solid #30343b;
+  border-radius: 4px;
+  background: #fff4df;
+  content: "";
+}
+
+.christmas-stocking::after {
+  position: absolute;
+  right: -8px;
+  bottom: -2px;
+  width: 12px;
+  height: 9px;
+  border: 2px solid #30343b;
+  border-left: 0;
+  border-radius: 0 8px 8px 0;
+  background: #c64d49;
+  content: "";
+}
 
 .cartoon-player.is-playing .cartoon-player__notes span {
-  animation: cartoon-note-float 1.65s ease-in-out infinite;
+  animation: cartoon-note-float 2.15s cubic-bezier(0.2, 0.62, 0.28, 1) infinite;
+}
+
+.cartoon-player--christmas.is-playing .cartoon-player__notes span {
+  animation-duration: 2.75s;
+  animation-timing-function: cubic-bezier(0.2, 0.62, 0.28, 1);
 }
 
 .cartoon-player.is-playing .cartoon-player__notes span:nth-child(2) { animation-delay: 0.35s; }
@@ -1079,9 +1154,10 @@ html[lang="zh-CN"] .zh-intro-title {
 }
 
 @keyframes cartoon-note-float {
-  0% { opacity: 0; transform: translate(0, 8px) rotate(-8deg) scale(0.8); }
-  35% { opacity: 1; }
-  100% { opacity: 0; transform: translate(-8px, -30px) rotate(9deg) scale(1.15); }
+  0% { opacity: 0; transform: translate(0, 9px) rotate(-5deg) scale(0.8); }
+  24% { opacity: 1; }
+  68% { opacity: 0.9; }
+  100% { opacity: 0; transform: translate(var(--float-x), var(--float-y)) rotate(var(--float-rotate)) scale(1.05); }
 }
 
 @media (min-width: 701px) {
