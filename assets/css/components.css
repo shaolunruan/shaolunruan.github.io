@@ -867,7 +867,7 @@ html[lang="zh-CN"] .zh-intro-title {
   display: grid;
   width: min(390px, 72vw);
   max-height: min(76vh, 650px);
-  padding: 10px 10px 34px;
+  padding: 14px;
   overflow: hidden;
   border: 3px solid #30343b;
   border-radius: 18px;
@@ -885,24 +885,10 @@ html[lang="zh-CN"] .zh-intro-title {
 
 .memory-photo-preview__frame img {
   width: 100%;
-  max-height: calc(76vh - 48px);
+  max-height: calc(76vh - 34px);
   border-radius: 10px;
   background: #ece8df;
   object-fit: contain;
-}
-
-.memory-photo-preview__caption {
-  position: absolute;
-  right: 12px;
-  bottom: 7px;
-  left: 12px;
-  color: #30343b;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.8rem;
-  font-style: italic;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-align: center;
 }
 
 .memory-photo-preview__zoom {
