@@ -66,7 +66,7 @@ const players = copy.tracks.map((track, index) => {
       <div class="cartoon-turntable">
         <div class="cartoon-turntable__lid">
         </div>
-        ${memoryPhoto ? `<button class="cartoon-memory-photo" type="button" aria-label="${memoryPhotoCopy.open}: ${track.title}" data-memory-photo="${memoryPhoto.src}" data-memory-caption="${memoryCaption}" style="--memory-position: ${memoryPhoto.position}"><span class="cartoon-memory-photo__tape" aria-hidden="true"></span><img src="${memoryPhoto.src}" alt="${memoryCaption}"><small>${memoryPhotoCopy.memory} ${String(index + 1).padStart(2, "0")}</small></button>` : ""}
+        ${memoryPhoto ? `<button class="cartoon-memory-photo" type="button" aria-label="${memoryPhotoCopy.open}: ${track.title}" data-memory-photo="${memoryPhoto.src}" style="--memory-position: ${memoryPhoto.position}"><span class="cartoon-memory-photo__tape" aria-hidden="true"></span><img src="${memoryPhoto.src}" alt="${memoryCaption}"><small>${memoryPhotoCopy.memory} ${String(index + 1).padStart(2, "0")}</small></button>` : ""}
         <div class="cartoon-turntable__deck" aria-hidden="true">
           <div class="cartoon-record"><span class="cartoon-record__ring"></span><span class="cartoon-record__label"></span></div>
           <div class="cartoon-tonearm"><span></span></div>
@@ -94,26 +94,29 @@ const players = copy.tracks.map((track, index) => {
 
 const content = `
   <div class="life-page">
-    <div class="memory-player-shell memory-carousel-shell">
-      <section class="memory-carousel" aria-label="${copy.label}">
-        <button class="memory-carousel__arrow memory-carousel__arrow--prev" type="button" aria-label="${copy.previous}"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
-        <div class="memory-carousel__viewport">${players}</div>
-        <button class="memory-carousel__arrow memory-carousel__arrow--next" type="button" aria-label="${copy.next}"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
-        <div class="memory-carousel__dots" aria-label="Memory selection">
-          ${copy.tracks.map((track, index) => `<button type="button" data-dot-index="${index}" aria-label="${track.title}" class="${index === 0 ? "is-active" : ""}"></button>`).join("")}
-        </div>
-        <audio class="memory-carousel__audio" preload="metadata" src="${audioSources[0]}"></audio>
-      </section>
+    <div class="memory-scroll-stage">
+      <div class="memory-player-shell memory-carousel-shell">
+        <section class="memory-carousel" aria-label="${copy.label}">
+          <button class="memory-carousel__arrow memory-carousel__arrow--prev" type="button" aria-label="${copy.previous}"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+          <div class="memory-carousel__viewport">${players}</div>
+          <button class="memory-carousel__arrow memory-carousel__arrow--next" type="button" aria-label="${copy.next}"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+          <div class="memory-carousel__dots" aria-label="Memory selection">
+            ${copy.tracks.map((track, index) => `<button type="button" data-dot-index="${index}" aria-label="${track.title}" class="${index === 0 ? "is-active" : ""}"></button>`).join("")}
+          </div>
+          <audio class="memory-carousel__audio" preload="metadata" src="${audioSources[0]}"></audio>
+        </section>
+      </div>
+      <p class="life-gallery__quote">${locale === "zh" ? galleryQuoteZh : locale === "de" ? galleryQuoteDe : galleryQuote}</p>
     </div>
     <button class="memory-photo-preview" type="button" aria-label="${memoryPhotoCopy.close}" aria-hidden="true">
       <span class="memory-photo-preview__frame">
         <img src="${memoryPhotos[0].src}" alt="">
-        <span class="memory-photo-preview__caption"></span>
         <i class="memory-photo-preview__zoom fa-solid fa-magnifying-glass-minus" aria-hidden="true"></i>
       </span>
     </button>
-    <p class="life-gallery__quote">${locale === "zh" ? galleryQuoteZh : locale === "de" ? galleryQuoteDe : galleryQuote}</p>
-    ${(locale === "zh" ? galleryGroupsZh : locale === "de" ? galleryGroupsDe : galleryGroups).map(renderGalleryGroup).join("<br/><br/><br/>")}
+    <div class="life-gallery">
+      ${(locale === "zh" ? galleryGroupsZh : locale === "de" ? galleryGroupsDe : galleryGroups).map(renderGalleryGroup).join("<br/><br/><br/>")}
+    </div>
   </div>`;
 
 mountPage({ title: locale === "zh" ? "阮劭伦 - 生活" : locale === "de" ? "Shaolun RUAN (阮劭伦) – Privates" : "Shaolun RUAN (阮劭伦) - Life", content, showSidebar: false, locale });
@@ -193,7 +196,6 @@ document.querySelectorAll(".cartoon-memory-photo").forEach((thumbnail) => {
     const previewImage = memoryPhotoPreview.querySelector("img");
     previewImage.src = thumbnail.dataset.memoryPhoto;
     previewImage.alt = thumbnail.querySelector("img")?.alt || memoryPhotoCopy.memory;
-    memoryPhotoPreview.querySelector(".memory-photo-preview__caption").textContent = thumbnail.dataset.memoryCaption || memoryPhotoCopy.memory;
     memoryPhotoPreview.classList.add("is-open");
     memoryPhotoPreview.setAttribute("aria-hidden", "false");
   });
