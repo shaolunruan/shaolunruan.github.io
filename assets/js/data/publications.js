@@ -37,15 +37,16 @@ export const publications = [
   },
   {
     id: "vis4qc-survey",
+    badge: "IEEE TVCG",
     image: "/assets/images/vis4qc-survey.png",
     title: "Visualization for Quantum Computing: Current State and Future Directions",
     authors:
       "Feng Liang, Xiaolin Wen, Shixian Zhou, <strong>Shaolun Ruan</strong>, Yuxuan Du, Qiang Guan, Jun Ye, and Yong Wang",
-    venue: "Under review by IEEE TVCG.",
+    venue: "IEEE Transactions on Visualization and Computer Graphics (TVCG 2026).",
     links: [
       {
         label: "[pdf]",
-        href: "https://www.researchgate.net/profile/Feng-Liang-55/publication/404040113_Visualization_for_Quantum_Computing_Current_State_and_Future_Directions/links/69ee17adb2e0972eb41c5284/Visualization-for-Quantum-Computing-Current-State-and-Future-Directions.pdf",
+        href: "/assets/paper/vis4qc-survey.pdf",
       },
     ],
   },

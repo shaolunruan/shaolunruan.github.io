@@ -1,4 +1,4 @@
-import { publications } from "../data/publications.js?v=lang-ui-6";
+import { publications } from "../data/publications.js?v=tvcg-accepted-1";
 
 const publicationMap = new Map(publications.map((publication) => [publication.id, publication]));
 

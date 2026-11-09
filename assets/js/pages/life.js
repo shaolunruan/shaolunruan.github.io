@@ -9,8 +9,8 @@ const carouselCopy = {
     label: "Memory music carousel", previous: "Previous memory", next: "Next memory", play: "Play this memory", pause: "Pause this memory",
     tracks: [
       { title: "水平線", meta: "back number · 2021", color: "blue" },
-      { title: "Harvest", meta: "NIKIIE · 2016", color: "horizon" },
-      { title: "seeds", meta: "NIKIIE · 2016", color: "deepblue" },
+      { title: "seeds", meta: "NIKIIE · 2016", color: "horizon" },
+      { title: "The last rain", meta: "Uru · 2016", color: "deepblue" },
       { title: "クリスマスソング (Christmas Song)", meta: "back number · 2015", color: "christmas" },
     ],
   },
@@ -18,8 +18,8 @@ const carouselCopy = {
     label: "Musikkarussell der Erinnerungen", previous: "Vorherige Erinnerung", next: "Nächste Erinnerung", play: "Diese Erinnerung abspielen", pause: "Diese Erinnerung pausieren",
     tracks: [
       { title: "水平線", meta: "back number · 2021", color: "blue" },
-      { title: "Harvest", meta: "NIKIIE · 2016", color: "horizon" },
-      { title: "seeds", meta: "NIKIIE · 2016", color: "deepblue" },
+      { title: "seeds", meta: "NIKIIE · 2016", color: "horizon" },
+      { title: "The last rain", meta: "Uru · 2016", color: "deepblue" },
       { title: "クリスマスソング (Christmas Song)", meta: "back number · 2015", color: "christmas" },
     ],
   },
@@ -27,31 +27,47 @@ const carouselCopy = {
     label: "回忆音乐轮播", previous: "上一段回忆", next: "下一段回忆", play: "播放这段回忆", pause: "暂停这段回忆",
     tracks: [
       { title: "水平線", meta: "back number · 2021", color: "blue" },
-      { title: "Harvest", meta: "NIKIIE · 2016", color: "horizon" },
-      { title: "seeds", meta: "NIKIIE · 2016", color: "deepblue" },
+      { title: "seeds", meta: "NIKIIE · 2016", color: "horizon" },
+      { title: "The last rain", meta: "Uru · 2016", color: "deepblue" },
       { title: "クリスマスソング (Christmas Song)", meta: "back number · 2015", color: "christmas" },
     ],
   },
 };
 
 const copy = carouselCopy[locale] || carouselCopy.en;
+const memoryPhotoCopy = locale === "zh"
+  ? { open: "打开回忆照片", close: "收起回忆照片", memory: "回忆" }
+  : locale === "de"
+    ? { open: "Erinnerungsfoto öffnen", close: "Erinnerungsfoto schließen", memory: "Erinnerung" }
+    : { open: "Open memory photo", close: "Close memory photo", memory: "Memory" };
+const memoryPhotos = [
+  { src: "/assets/memories/suiheisen-dinner.JPG", position: "center 54%" },
+  { src: "/assets/memories/harvest-liuyizhe.jpg", position: "center 66%" },
+  { src: "/assets/memories/seeds-new-year.JPG", position: "center 52%" },
+  null,
+];
 const audioSources = [
   "/assets/music/back-number-suiheisen.mp3",
-  "/assets/music/nikiiie-harvest.mp3",
   "/assets/music/nikiiie-seeds.mp3",
+  "/assets/music/uru-the-last-rain.mp3",
   "/assets/music/back-number-christmas-song.mp3",
 ];
 
-const players = copy.tracks.map((track, index) => `
-  <article class="cartoon-player cartoon-player--${track.color}" data-player-index="${index}" aria-hidden="${index === 0 ? "false" : "true"}">
+const players = copy.tracks.map((track, index) => {
+  const memoryPhoto = memoryPhotos[index];
+  const memoryCaption = `${track.title} · ${memoryPhotoCopy.memory} ${String(index + 1).padStart(2, "0")}`;
+  return `
+  <article class="cartoon-player cartoon-player--${track.color}${memoryPhoto ? " has-memory-photo" : ""}" data-player-index="${index}" aria-hidden="${index === 0 ? "false" : "true"}">
     ${track.color === "christmas" ? '<div class="cartoon-player__snow" aria-hidden="true"><span>✦</span><span>✦</span><span>✦</span></div>' : ""}
     <div class="cartoon-player__header">
       <span>${String(index + 1).padStart(2, "0")} / ${String(copy.tracks.length).padStart(2, "0")}</span>
     </div>
     <div class="cartoon-player__body">
-      <div class="cartoon-turntable" aria-hidden="true">
-        <div class="cartoon-turntable__lid"></div>
-        <div class="cartoon-turntable__deck">
+      <div class="cartoon-turntable">
+        <div class="cartoon-turntable__lid">
+        </div>
+        ${memoryPhoto ? `<button class="cartoon-memory-photo" type="button" aria-label="${memoryPhotoCopy.open}: ${track.title}" data-memory-photo="${memoryPhoto.src}" data-memory-caption="${memoryCaption}" style="--memory-position: ${memoryPhoto.position}"><span class="cartoon-memory-photo__tape" aria-hidden="true"></span><img src="${memoryPhoto.src}" alt="${memoryCaption}"><small>${memoryPhotoCopy.memory} ${String(index + 1).padStart(2, "0")}</small></button>` : ""}
+        <div class="cartoon-turntable__deck" aria-hidden="true">
           <div class="cartoon-record"><span class="cartoon-record__ring"></span><span class="cartoon-record__label"></span></div>
           <div class="cartoon-tonearm"><span></span></div>
           <span class="cartoon-knob cartoon-knob--one"></span><span class="cartoon-knob cartoon-knob--two"></span>
@@ -73,7 +89,8 @@ const players = copy.tracks.map((track, index) => `
       </div>
     </div>
   </article>
-`).join("");
+`;
+}).join("");
 
 const content = `
   <div class="life-page">
@@ -88,6 +105,13 @@ const content = `
         <audio class="memory-carousel__audio" preload="metadata" src="${audioSources[0]}"></audio>
       </section>
     </div>
+    <button class="memory-photo-preview" type="button" aria-label="${memoryPhotoCopy.close}" aria-hidden="true">
+      <span class="memory-photo-preview__frame">
+        <img src="${memoryPhotos[0].src}" alt="">
+        <span class="memory-photo-preview__caption"></span>
+        <i class="memory-photo-preview__zoom fa-solid fa-magnifying-glass-minus" aria-hidden="true"></i>
+      </span>
+    </button>
     <p class="life-gallery__quote">${locale === "zh" ? galleryQuoteZh : locale === "de" ? galleryQuoteDe : galleryQuote}</p>
     ${(locale === "zh" ? galleryGroupsZh : locale === "de" ? galleryGroupsDe : galleryGroups).map(renderGalleryGroup).join("<br/><br/><br/>")}
   </div>`;
@@ -98,6 +122,7 @@ const carousel = document.querySelector(".memory-carousel");
 const cards = [...document.querySelectorAll(".cartoon-player")];
 const dots = [...document.querySelectorAll("[data-dot-index]")];
 const audio = carousel?.querySelector(".memory-carousel__audio");
+const memoryPhotoPreview = document.querySelector(".memory-photo-preview");
 let activeIndex = 0;
 
 const formatTime = (seconds) => {
@@ -145,6 +170,7 @@ const resetPlayback = () => {
 
 const selectTrack = (index) => {
   const shouldResumePlayback = Boolean(audio && !audio.paused);
+  closeMemoryPhoto();
   resetPlayback();
   activeIndex = (index + cards.length) % cards.length;
   audio.src = audioSources[activeIndex];
@@ -160,6 +186,29 @@ const selectTrack = (index) => {
 carousel?.querySelector(".memory-carousel__arrow--prev")?.addEventListener("click", () => selectTrack(activeIndex - 1));
 carousel?.querySelector(".memory-carousel__arrow--next")?.addEventListener("click", () => selectTrack(activeIndex + 1));
 dots.forEach((dot) => dot.addEventListener("click", () => selectTrack(Number(dot.dataset.dotIndex))));
+
+document.querySelectorAll(".cartoon-memory-photo").forEach((thumbnail) => {
+  thumbnail.addEventListener("click", () => {
+    if (!memoryPhotoPreview) return;
+    const previewImage = memoryPhotoPreview.querySelector("img");
+    previewImage.src = thumbnail.dataset.memoryPhoto;
+    previewImage.alt = thumbnail.querySelector("img")?.alt || memoryPhotoCopy.memory;
+    memoryPhotoPreview.querySelector(".memory-photo-preview__caption").textContent = thumbnail.dataset.memoryCaption || memoryPhotoCopy.memory;
+    memoryPhotoPreview.classList.add("is-open");
+    memoryPhotoPreview.setAttribute("aria-hidden", "false");
+  });
+});
+
+const closeMemoryPhoto = () => {
+  if (!memoryPhotoPreview) return;
+  memoryPhotoPreview.classList.remove("is-open");
+  memoryPhotoPreview.setAttribute("aria-hidden", "true");
+};
+
+memoryPhotoPreview?.addEventListener("click", closeMemoryPhoto);
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMemoryPhoto();
+});
 
 cards.forEach((card, index) => {
   const playButton = card.querySelector(".cartoon-player__play");

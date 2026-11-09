@@ -30,6 +30,7 @@ export const typingWords = [
 ];
 
 export const newsItems = [
+  { date: "2026.11", text: "Unser Übersichtsartikel <em>Visualization for Quantum Computing: Current State and Future Directions</em> wurde von IEEE TVCG angenommen. Herzlichen Glückwunsch an das Team!" },
   { date: "2026.05", text: "Ich trete dem Forschungsteam der Universität Konstanz als Postdoktorand bei 🇩🇪." },
   { date: "2026.01", text: "Ich habe meine Doktorarbeit erfolgreich verteidigt." },
   { date: "2025.12", text: "🎄🎅🏻🎄<span style='color:rgb(185, 74, 34);'>Frohe Weihnachten und viel Frieden, Liebe und Glück für Sie und Ihre Familie!</span>🎄🎅🏻🎄" },

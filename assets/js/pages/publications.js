@@ -1,6 +1,6 @@
 import { getPreferredLocale, mountPage, renderArticle } from "../components/layout.js?v=lang-ui-6";
-import { renderPublicationCards } from "../components/publications.js?v=lang-ui-6";
-import { allPublicationIds } from "../data/publications.js?v=lang-ui-6";
+import { renderPublicationCards } from "../components/publications.js?v=tvcg-accepted-1";
+import { allPublicationIds } from "../data/publications.js?v=tvcg-accepted-1";
 
 const locale = getPreferredLocale();
 const heading = locale === "zh" ? "期刊与会议论文" : locale === "de" ? "Zeitschriften- und Konferenzbeiträge" : "Journals and Conferences";
