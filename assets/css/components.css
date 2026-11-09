@@ -245,6 +245,17 @@ html[lang="zh-CN"] .zh-intro-title {
   width: 100%;
 }
 
+.memory-scroll-stage {
+  position: relative;
+  padding-bottom: 358px;
+}
+
+.life-gallery {
+  position: relative;
+  z-index: 1;
+  margin-top: -358px;
+}
+
 .memory-player-shell {
   position: sticky;
   z-index: 12;
@@ -1320,10 +1331,18 @@ html[lang="zh-CN"] .zh-intro-title {
 }
 
 @media (min-width: 701px) {
+  .memory-scroll-stage {
+    padding-bottom: 277px;
+  }
+
+  .life-gallery {
+    margin-top: -277px;
+  }
+
   .memory-carousel-shell {
     width: 100%;
-    max-width: 700px;
-    height: 301px;
+    max-width: 642px;
+    height: 277px;
   }
 
   .memory-carousel-shell::before {
@@ -1342,12 +1361,16 @@ html[lang="zh-CN"] .zh-intro-title {
     width: 1000px;
     height: 430px;
     margin-left: -500px;
-    transform: scale(0.7);
+    transform: scale(0.641667);
     transform-origin: top center;
   }
 }
 
 @media (max-width: 700px) {
+  .memory-carousel-shell {
+    height: 358px;
+  }
+
   .memory-carousel-shell::before {
     top: -8px;
     right: 0;
@@ -1356,7 +1379,12 @@ html[lang="zh-CN"] .zh-intro-title {
     border-radius: 0;
   }
 
-  .memory-carousel { height: 390px; border-radius: 22px; }
+  .memory-carousel {
+    height: 390px;
+    border-radius: 22px;
+    transform: scale(0.916667);
+    transform-origin: top center;
+  }
   .memory-carousel__viewport { height: 356px; }
   .cartoon-player { top: 24px; width: 76%; height: 307px; }
   .cartoon-player__header { padding: 12px 14px 6px; font-size: 0.56rem; }
@@ -1370,6 +1398,18 @@ html[lang="zh-CN"] .zh-intro-title {
 }
 
 @media (max-width: 500px) {
+  .memory-scroll-stage {
+    padding-bottom: 394px;
+  }
+
+  .life-gallery {
+    margin-top: -394px;
+  }
+
+  .memory-carousel-shell {
+    height: 394px;
+  }
+
   .memory-photo-preview {
     padding: 17px;
   }
