@@ -7,9 +7,9 @@ import {
   startTypingWords,
 } from "../components/sections.js?v=human-ai-3";
 import { publicationTabs } from "../data/publications.js?v=tvcg-accepted-1";
-import * as english from "../data/home.js?v=human-ai-3";
-import * as german from "../data/home.de.js?v=human-ai-3";
-import * as chinese from "../data/home.zh.js?v=human-ai-3";
+import * as english from "../data/home.js?v=tvcg-news-1";
+import * as german from "../data/home.de.js?v=tvcg-news-1";
+import * as chinese from "../data/home.zh.js?v=tvcg-news-1";
 
 const locale = getPreferredLocale();
 const data = locale === "zh" ? chinese : locale === "de" ? german : english;

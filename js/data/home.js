@@ -34,6 +34,7 @@ export const typingWords = [
 ];
 
 export const newsItems = [
+  { date: "2026.11", text: "Our survey paper <em>Visualization for Quantum Computing: Current State and Future Directions</em> has been accepted by IEEE TVCG. Congrats team!" },
   { date: "2026.05", text: "I join the research team at University of Konstanz and become a postdoctoral researcher 🇩🇪." },
   { date: "2026.01", text: "I have passed the Ph.D. thesis defense." },
   {
