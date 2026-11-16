@@ -2,6 +2,13 @@ export const galleryQuote = '"No great future is worth missing the beauty of all
 
 export const galleryGroups = [
   [
+    { image: "/assets/photo-gallery/sample-snow-final.jpg", caption: "Niseko in Hokkaido, 2026" },
+    { image: "/assets/photo-gallery/sample-rainbow.jpg", caption: "Konstanz, Germany, 2026" },
+    { image: "/assets/photo-gallery/sample-switzerland.JPG", caption: "Grindelwald, Switzerland, 2026" },
+    { image: "/assets/photo-gallery/sample-dinner.JPG", caption: "Dinner in Konstanz, 2026" },
+    { image: "/assets/photo-gallery/sample-chandelier.jpg", caption: "Christmas in Chengdu, 2025" },
+  ],
+  [
     { image: "/assets/photo-gallery/img5.JPG", caption: "Lanzhou, China, 2025" },
     { image: "/assets/photo-gallery/img2.JPG", caption: "Venice, Italy, 2025" },
     { image: "/assets/photo-gallery/img6.JPG", caption: "Tokyo, Japan, 2024" },
@@ -28,6 +35,7 @@ export const galleryQuoteZh = "“再美好的未来，也不值得错过四季�
 export const galleryQuoteDe = "„Keine noch so großartige Zukunft ist es wert, die Schönheit aller vier Jahreszeiten zu verpassen.“";
 
 const galleryCaptionsZh = [
+  "日本北海道二世古，2026", "德国康斯坦茨，2026", "瑞士格林德瓦，2026", "德国康斯坦茨晚餐，2026", "成都圣诞节，2025",
   "中国兰州，2025", "意大利威尼斯，2025", "日本东京，2024", "澳大利亚墨尔本，2025", "日本富士山，2024",
   "巴黎埃菲尔铁塔，2023", "墨尔本布莱顿海滩，2017", "德国莱比锡广场，2023", "博士生涯第一天，新加坡，2022", "爱丁堡之冬，2022",
   "香港科技大学校友重聚，墨尔本，2023", "毕业于 UESTC，中国，2019", "奥克兰黎明，2017", "伦敦平安夜，2022", "印度尼西亚民丹岛，2022",
@@ -41,6 +49,7 @@ export const galleryGroupsZh = galleryGroups.map((group, groupIndex) =>
 );
 
 const galleryCaptionsDe = [
+  "Niseko auf Hokkaido, 2026", "Konstanz, Deutschland, 2026", "Grindelwald, Schweiz, 2026", "Abendessen in Konstanz, 2026", "Weihnachten in Chengdu, 2025",
   "Lanzhou, China, 2025", "Venedig, Italien, 2025", "Tokio, Japan, 2024", "Melbourne, Australien, 2025", "Berg Fuji, Japan, 2024",
   "Eiffelturm, Paris, 2023", "Brighton Beach, Melbourne, 2017", "Leipziger Platz, Deutschland, 2023", "Erster Tag der Promotion, Singapur, 2022", "Winter in Edinburgh, 2022",
   "HKUST-Wiedersehen, Melbourne, 2023", "Abschluss an der UESTC, China, 2019", "Morgendämmerung in Auckland, 2017", "Heiligabend in London, 2022", "Bintan, Indonesien, 2022",

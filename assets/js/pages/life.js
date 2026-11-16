@@ -1,6 +1,6 @@
-import { renderGalleryGroup } from "../components/gallery.js?v=lang-ui-6";
+import { renderGalleryGroup } from "../components/gallery.js?v=gallery-captions-2";
 import { getPreferredLocale, mountPage } from "../components/layout.js?v=lang-ui-6";
-import { galleryGroups, galleryGroupsDe, galleryGroupsZh, galleryQuote, galleryQuoteDe, galleryQuoteZh } from "../data/gallery.js?v=lang-ui-6";
+import { galleryGroups, galleryGroupsDe, galleryGroupsZh, galleryQuote, galleryQuoteDe, galleryQuoteZh } from "../data/gallery.js?v=gallery-captions-2";
 
 const locale = getPreferredLocale();
 
@@ -171,8 +171,8 @@ const resetPlayback = () => {
   });
 };
 
-const selectTrack = (index) => {
-  const shouldResumePlayback = Boolean(audio && !audio.paused);
+const selectTrack = (index, forcePlayback = false) => {
+  const shouldResumePlayback = forcePlayback || Boolean(audio && !audio.paused);
   closeMemoryPhoto();
   resetPlayback();
   activeIndex = (index + cards.length) % cards.length;
@@ -240,6 +240,7 @@ audio?.addEventListener("pause", () => {
   card.querySelector(".cartoon-player__play i").className = "fa-solid fa-play";
   card.querySelector(".cartoon-player__play").setAttribute("aria-label", copy.play);
 });
+audio?.addEventListener("ended", () => selectTrack(activeIndex + 1, true));
 
 updateCarousel();
 requestAnimationFrame(updateTitleMarquees);
